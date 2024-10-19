@@ -32,7 +32,7 @@ Distributed under the GNU General Public License v3.0 (GPL-3.0) License. See `LI
 
 ## Contact
 
-HamsterBase - hello@hamsterbase.com
+HamsterBase - admin@hamsterbase.com
 
 Project Link: [https://github.com/hamsterbase/burrow-ui](https://github.com/hamsterbase/burrow-ui)
 
