@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -40,6 +41,9 @@ public class MainActivity extends Activity {
     private BroadcastReceiver batteryReceiver;
     private String batteryText = "";
 
+    private float touchStartY;
+    private static final float SWIPE_THRESHOLD = 200;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +56,6 @@ public class MainActivity extends Activity {
         timeTextView = findViewById(R.id.timeTextView);
         dateTextView = findViewById(R.id.dateTextView);
         appLinearLayout = findViewById(R.id.appLinearLayout);
-
         debugTextView = findViewById(R.id.debugTextView);
         if (BuildConfig.DEBUG) {
             debugTextView.setVisibility(View.VISIBLE);
@@ -81,6 +84,26 @@ public class MainActivity extends Activity {
         rootView.setOnLongClickListener(v -> {
             openSettingsActivity();
             return true;
+        });
+
+        rootView.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch (event.getAction()) {
+                    case MotionEvent.ACTION_DOWN:
+                        touchStartY = event.getY();
+                        return true;
+                    case MotionEvent.ACTION_UP:
+                        float touchEndY = event.getY();
+                        float deltaY = touchEndY - touchStartY;
+                        if (deltaY > SWIPE_THRESHOLD) {
+                            openSearchActivity();
+                            return true;
+                        }
+                        return false;
+                }
+                return false;
+            }
         });
 
         batteryReceiver = new BroadcastReceiver() {
@@ -198,6 +221,11 @@ public class MainActivity extends Activity {
 
     private void openSettingsActivity() {
         Intent intent = new Intent(this, SettingsActivity.class);
+        startActivity(intent);
+    }
+
+    private void openSearchActivity() {
+        Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
     }
 }
