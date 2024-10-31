@@ -1,5 +1,7 @@
 # Burrow UI
 
+![](home.png)
+
 Burrow UI is an open-source, free launcher designed specifically for E-ink devices. Inspired by the Niagara Launcher, Burrow UI offers a minimalist and efficient interface tailored for E-ink screens.
 
 ## Features
