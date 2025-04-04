@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
 
     private TextView timeTextView;
     private TextView dateTextView;
+    private TextView amPmTextView;
     private LinearLayout appLinearLayout;
     private List<AppInfo> selectedApps;
     private SettingsManager settingsManager;
@@ -58,6 +59,7 @@ public class MainActivity extends Activity {
 
         timeTextView = findViewById(R.id.timeTextView);
         dateTextView = findViewById(R.id.dateTextView);
+        amPmTextView = findViewById(R.id.amPmTextView);
         appLinearLayout = findViewById(R.id.appLinearLayout);
 
         ScrollView appList = findViewById(R.id.appScrollList);
@@ -175,9 +177,25 @@ public class MainActivity extends Activity {
     }
 
     private void updateTime() {
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
-        String currentTime = sdf.format(new Date());
-        timeTextView.setText(currentTime);
+        if (settingsManager.isUse24HourFormat()) {
+            // 24-hour format
+            SimpleDateFormat sdf = new SimpleDateFormat("HH:mm", Locale.getDefault());
+            String currentTime = sdf.format(new Date());
+            timeTextView.setText(currentTime);
+            amPmTextView.setVisibility(View.GONE);
+        } else {
+            // 12-hour format
+            SimpleDateFormat sdf = new SimpleDateFormat("hh:mm", Locale.getDefault());
+            String currentTime = sdf.format(new Date());
+            timeTextView.setText(currentTime);
+            
+            // Get AM/PM separately using English locale to ensure "AM"/"PM" instead of "上午"/"下午"
+            SimpleDateFormat amPmSdf = new SimpleDateFormat("a", Locale.ENGLISH);
+            String amPm = amPmSdf.format(new Date());
+            amPmTextView.setText(amPm);
+            amPmTextView.setVisibility(View.VISIBLE);
+        }
+        
         String dateFormat = settingsManager.getDateFormat();
         SimpleDateFormat dateSdf = new SimpleDateFormat(dateFormat, Locale.ENGLISH);
         String currentDate = dateSdf.format(new Date()).concat(batteryText);

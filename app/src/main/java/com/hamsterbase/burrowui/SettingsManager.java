@@ -20,6 +20,7 @@ public class SettingsManager {
     private static final String DEFAULT_DATE_FORMAT = "EEE, MMM d";
     private static final String SELECTED_ITEMS_KEY = "SelectedItems";
     private static final String ENABLE_PULL_DOWN_SEARCH_KEY = "EnablePullDownSearch";
+    private static final String USE_24_HOUR_FORMAT_KEY = "Use24HourFormat";
 
     private SharedPreferences sharedPreferences;
 
@@ -121,6 +122,16 @@ public class SettingsManager {
     public void setEnablePullDownSearch(boolean enable) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(ENABLE_PULL_DOWN_SEARCH_KEY, enable);
+        editor.apply();
+    }
+
+    public boolean isUse24HourFormat() {
+        return sharedPreferences.getBoolean(USE_24_HOUR_FORMAT_KEY, true);
+    }
+
+    public void setUse24HourFormat(boolean use24Hour) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(USE_24_HOUR_FORMAT_KEY, use24Hour);
         editor.apply();
     }
 

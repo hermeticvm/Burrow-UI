@@ -66,6 +66,18 @@ public class SettingsActivity extends Activity implements NavigationBar.OnBackCl
 
         addLine();
 
+        settingsContainer.addView(new SwitchSettingsItem(
+                this,
+                "24-Hour Time Format",
+                "When enabled, time is displayed in 24-hour format. When disabled, time is displayed in 12-hour format with AM/PM.",
+                settingsManager.isUse24HourFormat(),
+                isChecked -> {
+                    settingsManager.setUse24HourFormat(isChecked);
+                }
+        ));
+
+        addLine();
+
         addSection("App Info", "View application details", R.drawable.ic_right,
                 v -> startActivity(new Intent(SettingsActivity.this, AboutActivity.class)));
 
