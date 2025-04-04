@@ -17,7 +17,7 @@ public class SettingsManager {
     private static final String PREFS_NAME = "Burrow UI";
     private static final String SHOW_SETTINGS_ICON_KEY = "ShowSettingsIcon";
     private static final String PREF_DATE_FORMAT = "date_format";
-    private static final String DEFAULT_DATE_FORMAT = "EEE,MMM d";
+    private static final String DEFAULT_DATE_FORMAT = "EEE, MMM d";
     private static final String SELECTED_ITEMS_KEY = "SelectedItems";
 
     private SharedPreferences sharedPreferences;
