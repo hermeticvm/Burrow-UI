@@ -1,7 +1,6 @@
 package com.hamsterbase.burrowui;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -45,8 +44,6 @@ public class MainActivity extends Activity {
 
     private float touchStartY;
     private static final float SWIPE_THRESHOLD = 200;
-    private static final float TOP_PULL_DOWN_PERCENT = 0.15f; // 25% of screen height
-    private int screenHeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,9 +88,6 @@ public class MainActivity extends Activity {
         displaySelectedApps();
 
         View rootView = findViewById(android.R.id.content);
-        rootView.post(() -> {
-            screenHeight = rootView.getHeight();
-        });
 
         rootView.setOnTouchListener(new View.OnTouchListener() {
             private boolean isLongPress = false;
@@ -111,15 +105,11 @@ public class MainActivity extends Activity {
 
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (!settingsManager.isEnablePullDownSearch()) {
-                    return false;
-                }
-
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         touchStartY = event.getY();
                         isLongPress = false;
-                        isPullDownEnabled = touchStartY > (screenHeight * TOP_PULL_DOWN_PERCENT);
+                        isPullDownEnabled = touchStartY > 50 && settingsManager.isEnablePullDownSearch();
                         longPressHandler.postDelayed(longPressRunnable, LONG_PRESS_TIMEOUT);
                         return true;
 
