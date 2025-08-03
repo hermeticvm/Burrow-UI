@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.hamsterbase.burrowui"
-    compileSdk = 34
+    compileSdk = 36
 
     buildFeatures {
         buildConfig = true
@@ -13,9 +13,9 @@ android {
     defaultConfig {
         applicationId = "com.hamsterbase.burrowui"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 3
-        versionName = "1.2.0"
+        targetSdk = 36
+        versionCode = 4
+        versionName = "1.2.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

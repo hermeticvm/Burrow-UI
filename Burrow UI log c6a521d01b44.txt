@@ -1,0 +1,1057 @@
+type: logcat
+osVersion: google/komodo/komodo:16/BP2A.250705.008/2025073000:user/release-keys
+flags: dev options enabled
+package: com.hamsterbase.burrowui.debug:4, targetSdk 36
+buffers: main,system,crash,events,kernel
+level: verbose
+
+--------- beginning of system
+08-03 22:27:57.634  5666  5682 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+08-03 22:27:59.159  5666  5666 E TransactionExecutor: Failed to execute the transaction: tId:-1305640470 ClientTransaction{
+08-03 22:27:59.159  5666  5666 E TransactionExecutor: tId:-1305640470   transactionItems=[
+08-03 22:27:59.159  5666  5666 E TransactionExecutor: tId:-1305640470     LaunchActivityItem{activityToken=android.os.BinderProxy@d90606b,intent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x34000000 xflg=0x4 pkg=com.hamsterbase.burrowui.debug cmp=com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity },ident=47025255,info=ActivityInfo{dba38f0 com.hamsterbase.burrowui.MainActivity},curConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h907dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 199 - 1344, 2920) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.4327 fontWeightAdjustment=0},overrideConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h907dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 199 - 1344, 2920) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.2 fontWeightAdjustment=0},deviceId=0,referrer=com.android.packageinstaller,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,sceneTransitionInfo=null,profilerInfo=null,assistToken=android.os.BinderProxy@ea4d86d,shareableActivityToken=android.os.BinderProxy@76f8ca2,activityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1344, 2992), taskFragmentBounds=Rect(0, 0 - 1344, 2992)}}
+08-03 22:27:59.159  5666  5666 E TransactionExecutor: tId:-1305640470     ResumeActivityItem{mActivityToken=android.os.BinderProxy@d90606b,procState=-1,isForward=true,shouldSendCompatFakeFocus=false}
+08-03 22:27:59.159  5666  5666 E TransactionExecutor: tId:-1305640470     Target activity: com.hamsterbase.burrowui.MainActivity
+08-03 22:27:59.159  5666  5666 E TransactionExecutor: tId:-1305640470   ]
+08-03 22:27:59.159  5666  5666 E TransactionExecutor: tId:-1305640470 }
+--------- beginning of crash
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: FATAL EXCEPTION: main
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: Process: com.hamsterbase.burrowui.debug, PID: 5666
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity}: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4293)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4480)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:222)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:133)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:103)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:80)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2832)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:248)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:338)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9106)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:593)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:948)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.updateAlphabeticalIndex(MainActivity.java:349)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.displaySelectedApps(MainActivity.java:241)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.onCreate(MainActivity.java:93)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9208)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9186)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1531)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4275)
+08-03 22:27:59.160  5666  5666 E AndroidRuntime: 	... 13 more
+--------- switch to system
+08-03 22:28:03.913  5752  5767 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+--------- beginning of main
+08-03 22:28:04.073  5752  5752 I .burrowui.debug: AssetManager2(0x100c25a1b3e7f28) locale list changing from [] to [en-US]
+08-03 22:28:04.074  5752  5752 I .burrowui.debug: AssetManager2(0xd00c25a1b3de628) locale list changing from [] to [en-US]
+08-03 22:28:04.078  5752  5752 I .burrowui.debug: AssetManager2(0xa00c25a1b3dfe28) locale list changing from [] to [en-US]
+08-03 22:28:04.079  5752  5752 I .burrowui.debug: AssetManager2(0xf00c25a1b3e1f28) locale list changing from [] to [en-US]
+08-03 22:28:04.080  5752  5752 I .burrowui.debug: AssetManager2(0xe00c25a1b3f6f28) locale list changing from [] to [en-US]
+08-03 22:28:04.081  5752  5752 I .burrowui.debug: AssetManager2(0xa00c25a1b3f6c28) locale list changing from [] to [en-US]
+08-03 22:28:04.083  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b3f7828) locale list changing from [] to [en-US]
+08-03 22:28:04.084  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b3f9628) locale list changing from [] to [en-US]
+08-03 22:28:04.085  5752  5752 I .burrowui.debug: AssetManager2(0x700c25a1b3f7228) locale list changing from [] to [en-US]
+08-03 22:28:04.086  5752  5752 I .burrowui.debug: AssetManager2(0x900c25a1b3fcc28) locale list changing from [] to [en-US]
+08-03 22:28:04.088  5752  5752 I .burrowui.debug: AssetManager2(0xb00c25a1b400e28) locale list changing from [] to [en-US]
+08-03 22:28:04.091  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b3f8a28) locale list changing from [] to [en-US]
+08-03 22:28:04.092  5752  5752 I .burrowui.debug: AssetManager2(0x800c25a1b401128) locale list changing from [] to [en-US]
+08-03 22:28:04.093  5752  5752 I .burrowui.debug: AssetManager2(0xc00c25a1b3fde28) locale list changing from [] to [en-US]
+08-03 22:28:04.094  5752  5752 I .burrowui.debug: AssetManager2(0x400c25a1b3f8d28) locale list changing from [] to [en-US]
+08-03 22:28:04.096  5752  5752 I .burrowui.debug: AssetManager2(0x100c25a1b401728) locale list changing from [] to [en-US]
+08-03 22:28:04.097  5752  5752 I .burrowui.debug: AssetManager2(0x500c25a1b3fe428) locale list changing from [] to [en-US]
+08-03 22:28:04.098  5752  5752 I .burrowui.debug: AssetManager2(0xa00c25a1b3f6028) locale list changing from [] to [en-US]
+08-03 22:28:04.100  5752  5752 I .burrowui.debug: AssetManager2(0x700c25a1b3fe128) locale list changing from [] to [en-US]
+08-03 22:28:04.102  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b3fab28) locale list changing from [] to [en-US]
+08-03 22:28:04.103  5752  5752 I .burrowui.debug: AssetManager2(0xc00c25a1b3fea28) locale list changing from [] to [en-US]
+08-03 22:28:04.105  5752  5752 I .burrowui.debug: AssetManager2(0xb00c25a1b3fb728) locale list changing from [] to [en-US]
+08-03 22:28:04.106  5752  5752 I .burrowui.debug: AssetManager2(0x500c25a1b3fc628) locale list changing from [] to [en-US]
+08-03 22:28:04.108  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b419a28) locale list changing from [] to [en-US]
+08-03 22:28:04.110  5752  5752 I .burrowui.debug: AssetManager2(0x700c25a1b413d28) locale list changing from [] to [en-US]
+08-03 22:28:04.111  5752  5752 I .burrowui.debug: AssetManager2(0x100c25a1b40ef28) locale list changing from [] to [en-US]
+08-03 22:28:04.115  5752  5752 I .burrowui.debug: AssetManager2(0xf00c25a1b419d28) locale list changing from [] to [en-US]
+08-03 22:28:04.117  5752  5752 I .burrowui.debug: AssetManager2(0xa00c25a1b413728) locale list changing from [] to [en-US]
+08-03 22:28:04.121  5752  5752 I .burrowui.debug: AssetManager2(0x900c25a1b40e928) locale list changing from [] to [en-US]
+08-03 22:28:04.122  5752  5752 I .burrowui.debug: AssetManager2(0xf00c25a1b417928) locale list changing from [] to [en-US]
+08-03 22:28:04.123  5752  5752 I .burrowui.debug: AssetManager2(0x800c25a1b40e328) locale list changing from [] to [en-US]
+08-03 22:28:04.124  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b417328) locale list changing from [] to [en-US]
+08-03 22:28:04.125  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b418828) locale list changing from [] to [en-US]
+08-03 22:28:04.127  5752  5752 I .burrowui.debug: AssetManager2(0x100c25a1b410d28) locale list changing from [] to [en-US]
+08-03 22:28:04.128  5752  5752 I .burrowui.debug: AssetManager2(0xe00c25a1b412e28) locale list changing from [] to [en-US]
+08-03 22:28:04.130  5752  5752 I .burrowui.debug: AssetManager2(0x700c25a1b416728) locale list changing from [] to [en-US]
+08-03 22:28:04.132  5752  5752 I .burrowui.debug: AssetManager2(0x500c25a1b413428) locale list changing from [] to [en-US]
+08-03 22:28:04.133  5752  5752 I .burrowui.debug: AssetManager2(0x300c25a1b414328) locale list changing from [] to [en-US]
+08-03 22:28:04.134  5752  5752 I .burrowui.debug: AssetManager2(0x100c25a1b411628) locale list changing from [] to [en-US]
+08-03 22:28:04.135  5752  5752 I .burrowui.debug: AssetManager2(0xd00c25a1b411928) locale list changing from [] to [en-US]
+08-03 22:28:04.136  5752  5752 I .burrowui.debug: AssetManager2(0xf00c25a1b40fe28) locale list changing from [] to [en-US]
+08-03 22:28:04.137  5752  5752 I .burrowui.debug: AssetManager2(0xf00c25a1b412228) locale list changing from [] to [en-US]
+08-03 22:28:04.138  5752  5752 I .burrowui.debug: AssetManager2(0x500c25a1b419128) locale list changing from [] to [en-US]
+08-03 22:28:04.140  5752  5752 I .burrowui.debug: AssetManager2(0xd00c25a1b428d28) locale list changing from [] to [en-US]
+08-03 22:28:04.141  5752  5752 I .burrowui.debug: AssetManager2(0x900c25a1b42c928) locale list changing from [] to [en-US]
+08-03 22:28:04.142  5752  5752 I .burrowui.debug: AssetManager2(0x500c25a1b42b128) locale list changing from [] to [en-US]
+08-03 22:28:04.143  5752  5752 I .burrowui.debug: AssetManager2(0xc00c25a1b426628) locale list changing from [] to [en-US]
+08-03 22:28:04.145  5752  5752 I .burrowui.debug: AssetManager2(0xf00c25a1b42f928) locale list changing from [] to [en-US]
+08-03 22:28:04.146  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b42de28) locale list changing from [] to [en-US]
+08-03 22:28:04.147  5752  5752 I .burrowui.debug: AssetManager2(0x900c25a1b431d28) locale list changing from [] to [en-US]
+08-03 22:28:04.148  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b429928) locale list changing from [] to [en-US]
+08-03 22:28:04.149  5752  5752 I .burrowui.debug: AssetManager2(0x100c25a1b429028) locale list changing from [] to [en-US]
+08-03 22:28:04.150  5752  5752 I .burrowui.debug: AssetManager2(0x100c25a1b431a28) locale list changing from [] to [en-US]
+08-03 22:28:04.152  5752  5752 I .burrowui.debug: AssetManager2(0xb00c25a1b42ff28) locale list changing from [] to [en-US]
+08-03 22:28:04.153  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b42cc28) locale list changing from [] to [en-US]
+08-03 22:28:04.154  5752  5752 I .burrowui.debug: AssetManager2(0x300c25a1b430528) locale list changing from [] to [en-US]
+08-03 22:28:04.155  5752  5752 I .burrowui.debug: AssetManager2(0xe00c25a1b428728) locale list changing from [] to [en-US]
+08-03 22:28:04.156  5752  5752 I .burrowui.debug: AssetManager2(0x900c25a1b430828) locale list changing from [] to [en-US]
+08-03 22:28:04.157  5752  5752 I .burrowui.debug: AssetManager2(0xa00c25a1b430e28) locale list changing from [] to [en-US]
+08-03 22:28:04.158  5752  5752 I .burrowui.debug: AssetManager2(0xc00c25a1b43fe28) locale list changing from [] to [en-US]
+08-03 22:28:04.159  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b445528) locale list changing from [] to [en-US]
+08-03 22:28:04.160  5752  5752 I .burrowui.debug: AssetManager2(0x400c25a1b43ec28) locale list changing from [] to [en-US]
+08-03 22:28:04.162  5752  5752 I .burrowui.debug: AssetManager2(0xe00c25a1b440428) locale list changing from [] to [en-US]
+08-03 22:28:04.164  5752  5752 I .burrowui.debug: AssetManager2(0x900c25a1b440d28) locale list changing from [] to [en-US]
+08-03 22:28:04.165  5752  5752 I .burrowui.debug: AssetManager2(0x200c25a1b447f28) locale list changing from [] to [en-US]
+08-03 22:28:04.169  5752  5752 I .burrowui.debug: AssetManager2(0x500c25a1b43e928) locale list changing from [] to [en-US]
+08-03 22:28:04.170  5752  5752 I .burrowui.debug: AssetManager2(0xe00c25a1b444c28) locale list changing from [] to [en-US]
+08-03 22:28:04.178  5752  5752 I .burrowui.debug: AssetManager2(0xe00c25a1b43f528) locale list changing from [] to [en-US]
+08-03 22:28:04.180  5752  5752 I .burrowui.debug: AssetManager2(0xc00c25a1b449128) locale list changing from [] to [en-US]
+08-03 22:28:04.188  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b442e28) locale list changing from [] to [en-US]
+08-03 22:28:04.202  5752  5752 I .burrowui.debug: AssetManager2(0x800c25a1b45de28) locale list changing from [] to [en-US]
+08-03 22:28:04.212  5752  5752 I .burrowui.debug: AssetManager2(0x100c25a1b460228) locale list changing from [] to [en-US]
+08-03 22:28:04.214  5752  5752 I .burrowui.debug: AssetManager2(0x400c25a1b36cc28) locale list changing from [] to [en-US]
+08-03 22:28:04.215  5752  5752 I .burrowui.debug: AssetManager2(0xf00c25a1b45a228) locale list changing from [] to [en-US]
+08-03 22:28:04.216  5752  5752 I .burrowui.debug: AssetManager2(0xa00c25a1b36f628) locale list changing from [] to [en-US]
+08-03 22:28:04.217  5752  5752 I .burrowui.debug: AssetManager2(0x900c25a1b45ab28) locale list changing from [] to [en-US]
+08-03 22:28:04.218  5752  5752 I .burrowui.debug: AssetManager2(0x100c25a1b36c928) locale list changing from [] to [en-US]
+08-03 22:28:04.224  5752  5752 I .burrowui.debug: AssetManager2(0xf00c25a1b45cf28) locale list changing from [] to [en-US]
+08-03 22:28:04.225  5752  5752 I .burrowui.debug: AssetManager2(0xf00c25a1b369628) locale list changing from [] to [en-US]
+08-03 22:28:04.226  5752  5752 I .burrowui.debug: AssetManager2(0x400c25a1b369f28) locale list changing from [] to [en-US]
+08-03 22:28:04.231  5752  5752 I .burrowui.debug: AssetManager2(0x500c25a1b39e728) locale list changing from [] to [en-US]
+08-03 22:28:04.237  5752  5752 I .burrowui.debug: AssetManager2(0x800c25a1b371128) locale list changing from [] to [en-US]
+08-03 22:28:04.238  5752  5752 I .burrowui.debug: AssetManager2(0x200c25a1b37f228) locale list changing from [] to [en-US]
+08-03 22:28:04.239  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b371728) locale list changing from [] to [en-US]
+08-03 22:28:04.246  5752  5752 I .burrowui.debug: AssetManager2(0xf00c25a1b45fc28) locale list changing from [] to [en-US]
+08-03 22:28:04.253  5752  5752 I .burrowui.debug: AssetManager2(0x900c25a1b388828) locale list changing from [] to [en-US]
+08-03 22:28:04.260  5752  5752 I .burrowui.debug: AssetManager2(0xb00c25a1b45e428) locale list changing from [] to [en-US]
+08-03 22:28:04.263  5752  5752 I .burrowui.debug: AssetManager2(0xc00c25a1b369c28) locale list changing from [] to [en-US]
+08-03 22:28:04.265  5752  5752 I .burrowui.debug: AssetManager2(0x900c25a1b36e728) locale list changing from [] to [en-US]
+08-03 22:28:04.272  5752  5752 I .burrowui.debug: AssetManager2(0x900c25a1b384928) locale list changing from [] to [en-US]
+08-03 22:28:04.280  5752  5752 I .burrowui.debug: AssetManager2(0xd00c25a1b385828) locale list changing from [] to [en-US]
+08-03 22:28:04.289  5752  5752 I .burrowui.debug: AssetManager2(0xc00c25a1b36a828) locale list changing from [] to [en-US]
+08-03 22:28:04.291  5752  5752 I .burrowui.debug: AssetManager2(0xe00c25a1b36a528) locale list changing from [] to [en-US]
+08-03 22:28:04.292  5752  5752 I .burrowui.debug: AssetManager2(0x100c25a1b398a28) locale list changing from [] to [en-US]
+08-03 22:28:04.293  5752  5752 I .burrowui.debug: AssetManager2(0xb00c25a1b3b1328) locale list changing from [] to [en-US]
+08-03 22:28:04.296  5752  5752 I .burrowui.debug: AssetManager2(0x900c25a1b3b3728) locale list changing from [] to [en-US]
+08-03 22:28:04.298  5752  5752 I .burrowui.debug: AssetManager2(0x400c25a1b384328) locale list changing from [] to [en-US]
+08-03 22:28:04.299  5752  5752 I .burrowui.debug: AssetManager2(0xc00c25a1b3c9628) locale list changing from [] to [en-US]
+08-03 22:28:04.306  5752  5752 I .burrowui.debug: AssetManager2(0xd00c25a1b3c6c28) locale list changing from [] to [en-US]
+08-03 22:28:04.318  5752  5752 I .burrowui.debug: AssetManager2(0xc00c25a1b39e428) locale list changing from [] to [en-US]
+08-03 22:28:04.330  5752  5752 I .burrowui.debug: AssetManager2(0x400c25a1b3c6f28) locale list changing from [] to [en-US]
+08-03 22:28:04.332  5752  5752 I .burrowui.debug: AssetManager2(0x500c25a1b3b4028) locale list changing from [] to [en-US]
+08-03 22:28:04.333  5752  5752 I .burrowui.debug: AssetManager2(0x100c25a1b45d228) locale list changing from [] to [en-US]
+08-03 22:28:04.340  5752  5752 I .burrowui.debug: AssetManager2(0x300c25a1b478828) locale list changing from [] to [en-US]
+08-03 22:28:04.342  5752  5752 I .burrowui.debug: AssetManager2(0xb00c25a1b36d828) locale list changing from [] to [en-US]
+08-03 22:28:04.343  5752  5752 I .burrowui.debug: AssetManager2(0x400c25a1b3c6328) locale list changing from [] to [en-US]
+08-03 22:28:04.346  5752  5752 I .burrowui.debug: AssetManager2(0x600c25a1b387f28) locale list changing from [] to [en-US]
+08-03 22:28:04.348  5752  5752 I .burrowui.debug: AssetManager2(0xa00c25a1b3e4f28) locale list changing from [] to [en-US]
+08-03 22:28:04.352  5752  5752 I .burrowui.debug: AssetManager2(0xf00c25a1b3ced28) locale list changing from [] to [en-US]
+--------- switch to system
+08-03 22:28:04.358  5752  5752 E TransactionExecutor: Failed to execute the transaction: tId:-116271288 ClientTransaction{
+08-03 22:28:04.358  5752  5752 E TransactionExecutor: tId:-116271288   transactionItems=[
+08-03 22:28:04.358  5752  5752 E TransactionExecutor: tId:-116271288     LaunchActivityItem{activityToken=android.os.BinderProxy@d90606b,intent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x34000000 xflg=0x4 pkg=com.hamsterbase.burrowui.debug cmp=com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity },ident=46008438,info=ActivityInfo{dba38f0 com.hamsterbase.burrowui.MainActivity},curConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h907dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 199 - 1344, 2920) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.4328 fontWeightAdjustment=0},overrideConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h907dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 199 - 1344, 2920) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.2 fontWeightAdjustment=0},deviceId=0,referrer=com.android.packageinstaller,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,sceneTransitionInfo=null,profilerInfo=null,assistToken=android.os.BinderProxy@ea4d86d,shareableActivityToken=android.os.BinderProxy@76f8ca2,activityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1344, 2992), taskFragmentBounds=Rect(0, 0 - 1344, 2992)}}
+08-03 22:28:04.358  5752  5752 E TransactionExecutor: tId:-116271288     ResumeActivityItem{mActivityToken=android.os.BinderProxy@d90606b,procState=-1,isForward=true,shouldSendCompatFakeFocus=false}
+08-03 22:28:04.358  5752  5752 E TransactionExecutor: tId:-116271288     Target activity: com.hamsterbase.burrowui.MainActivity
+08-03 22:28:04.358  5752  5752 E TransactionExecutor: tId:-116271288   ]
+08-03 22:28:04.358  5752  5752 E TransactionExecutor: tId:-116271288 }
+--------- switch to main
+08-03 22:28:04.358  5752  5752 D AndroidRuntime: Shutting down VM
+--------- switch to crash
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: FATAL EXCEPTION: main
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: Process: com.hamsterbase.burrowui.debug, PID: 5752
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity}: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4293)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4480)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:222)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:133)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:103)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:80)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2832)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:248)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:338)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9106)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:593)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:948)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.updateAlphabeticalIndex(MainActivity.java:349)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.displaySelectedApps(MainActivity.java:241)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.onCreate(MainActivity.java:93)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9208)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9186)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1531)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4275)
+08-03 22:28:04.359  5752  5752 E AndroidRuntime: 	... 13 more
+--------- switch to main
+08-03 22:28:12.374  5789  5789 I .burrowui.debug: Late-enabling -Xcheck:jni
+08-03 22:28:12.393  5789  5789 I .burrowui.debug: Using CollectorTypeCMC GC.
+08-03 22:28:12.401  5789  5789 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+08-03 22:28:12.419  5789  5789 D CompatChangeReporter: Compat change id reported: 242716250; UID 10380; state: ENABLED
+08-03 22:28:12.428  5789  5789 D nativeloader: Configuring clns-9 for other apk /data/app/~~HHtx-Fea4SiZ6EK4tl_ogg==/com.hamsterbase.burrowui.debug-7vkZbpVOIWttHho9S6veBg==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~HHtx-Fea4SiZ6EK4tl_ogg==/com.hamsterbase.burrowui.debug-7vkZbpVOIWttHho9S6veBg==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.hamsterbase.burrowui.debug
+08-03 22:28:12.431  5789  5789 I .burrowui.debug: AssetManager2(0x700c25a1b382b28) locale list changing from [] to [en-US]
+08-03 22:28:12.435  5789  5789 V GraphicsEnvironment: Currently set values for:
+08-03 22:28:12.435  5789  5789 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
+08-03 22:28:12.435  5789  5789 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
+08-03 22:28:12.435  5789  5789 V GraphicsEnvironment: com.hamsterbase.burrowui.debug is not listed in per-application setting
+08-03 22:28:12.436  5789  5789 V GraphicsEnvironment: ANGLE allowlist from config: 
+08-03 22:28:12.436  5789  5789 V GraphicsEnvironment: com.hamsterbase.burrowui.debug is not listed in ANGLE allowlist or settings, returning default
+08-03 22:28:12.436  5789  5789 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+--------- switch to system
+08-03 22:28:12.447  5789  5812 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+--------- switch to main
+08-03 22:28:12.450  5789  5789 I .burrowui.debug: AssetManager2(0x800c25a1b385528) locale list changing from [] to [en-US]
+08-03 22:28:12.454  5789  5789 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+08-03 22:28:12.463  5789  5789 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+08-03 22:28:12.519  5789  5789 I .burrowui.debug: AssetManager2(0x200c25a1b39db28) locale list changing from [] to [en-US]
+08-03 22:28:12.522  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b39ea28) locale list changing from [] to [en-US]
+08-03 22:28:12.524  5789  5789 I .burrowui.debug: AssetManager2(0x900c25a1b39c028) locale list changing from [] to [en-US]
+08-03 22:28:12.526  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3a1a28) locale list changing from [] to [en-US]
+08-03 22:28:12.527  5789  5789 I .burrowui.debug: AssetManager2(0x200c25a1b39ab28) locale list changing from [] to [en-US]
+08-03 22:28:12.528  5789  5789 I .burrowui.debug: AssetManager2(0x300c25a1b39c328) locale list changing from [] to [en-US]
+08-03 22:28:12.529  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b39f328) locale list changing from [] to [en-US]
+08-03 22:28:12.530  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b39f628) locale list changing from [] to [en-US]
+08-03 22:28:12.535  5789  5789 I .burrowui.debug: AssetManager2(0x700c25a1b3a0e28) locale list changing from [] to [en-US]
+08-03 22:28:12.536  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b3b8828) locale list changing from [] to [en-US]
+08-03 22:28:12.537  5789  5789 I .burrowui.debug: AssetManager2(0xe00c25a1b3b0a28) locale list changing from [] to [en-US]
+08-03 22:28:12.539  5789  5789 I .burrowui.debug: AssetManager2(0xb00c25a1b3af228) locale list changing from [] to [en-US]
+08-03 22:28:12.540  5789  5789 I .burrowui.debug: AssetManager2(0x400c25a1b3b8b28) locale list changing from [] to [en-US]
+08-03 22:28:12.543  5789  5789 I .burrowui.debug: AssetManager2(0x300c25a1b3b9a28) locale list changing from [] to [en-US]
+08-03 22:28:12.544  5789  5789 I .burrowui.debug: AssetManager2(0x800c25a1b3b8e28) locale list changing from [] to [en-US]
+08-03 22:28:12.546  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3b5228) locale list changing from [] to [en-US]
+08-03 22:28:12.547  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b3b0428) locale list changing from [] to [en-US]
+08-03 22:28:12.549  5789  5789 I .burrowui.debug: AssetManager2(0x400c25a1b3b4f28) locale list changing from [] to [en-US]
+08-03 22:28:12.551  5789  5789 I .burrowui.debug: AssetManager2(0xd00c25a1b3b5b28) locale list changing from [] to [en-US]
+08-03 22:28:12.553  5789  5789 I .burrowui.debug: AssetManager2(0x300c25a1b3b5528) locale list changing from [] to [en-US]
+08-03 22:28:12.554  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3b7628) locale list changing from [] to [en-US]
+08-03 22:28:12.556  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b3d1128) locale list changing from [] to [en-US]
+08-03 22:28:12.557  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b3c6f28) locale list changing from [] to [en-US]
+08-03 22:28:12.559  5789  5789 I .burrowui.debug: AssetManager2(0x900c25a1b3c9328) locale list changing from [] to [en-US]
+08-03 22:28:12.561  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b3d1d28) locale list changing from [] to [en-US]
+08-03 22:28:12.562  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b3cb728) locale list changing from [] to [en-US]
+08-03 22:28:12.564  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3c9028) locale list changing from [] to [en-US]
+08-03 22:28:12.565  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b3cd528) locale list changing from [] to [en-US]
+08-03 22:28:12.567  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3cf928) locale list changing from [] to [en-US]
+08-03 22:28:12.568  5789  5789 I .burrowui.debug: AssetManager2(0x300c25a1b3d0b28) locale list changing from [] to [en-US]
+08-03 22:28:12.569  5789  5789 I .burrowui.debug: AssetManager2(0xd00c25a1b3d1428) locale list changing from [] to [en-US]
+08-03 22:28:12.571  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3d1728) locale list changing from [] to [en-US]
+08-03 22:28:12.573  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b3ca228) locale list changing from [] to [en-US]
+08-03 22:28:12.575  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b3c6328) locale list changing from [] to [en-US]
+08-03 22:28:12.577  5789  5789 I .burrowui.debug: AssetManager2(0x300c25a1b3cb428) locale list changing from [] to [en-US]
+08-03 22:28:12.578  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3c9928) locale list changing from [] to [en-US]
+08-03 22:28:12.579  5789  5789 I .burrowui.debug: AssetManager2(0x400c25a1b3ced28) locale list changing from [] to [en-US]
+08-03 22:28:12.581  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b3e6a28) locale list changing from [] to [en-US]
+08-03 22:28:12.582  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3e7c28) locale list changing from [] to [en-US]
+08-03 22:28:12.583  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b3e3a28) locale list changing from [] to [en-US]
+08-03 22:28:12.584  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3e6d28) locale list changing from [] to [en-US]
+08-03 22:28:12.585  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b3e7028) locale list changing from [] to [en-US]
+08-03 22:28:12.587  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b3e3428) locale list changing from [] to [en-US]
+08-03 22:28:12.588  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3e5e28) locale list changing from [] to [en-US]
+08-03 22:28:12.589  5789  5789 I .burrowui.debug: AssetManager2(0x400c25a1b3e5b28) locale list changing from [] to [en-US]
+08-03 22:28:12.591  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b3e0128) locale list changing from [] to [en-US]
+08-03 22:28:12.592  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b3e5228) locale list changing from [] to [en-US]
+08-03 22:28:12.593  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3e4328) locale list changing from [] to [en-US]
+08-03 22:28:12.594  5789  5789 I .burrowui.debug: AssetManager2(0xe00c25a1b3e6428) locale list changing from [] to [en-US]
+08-03 22:28:12.596  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b3e5828) locale list changing from [] to [en-US]
+08-03 22:28:12.597  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b3e9d28) locale list changing from [] to [en-US]
+08-03 22:28:12.598  5789  5789 I .burrowui.debug: AssetManager2(0xe00c25a1b3e8228) locale list changing from [] to [en-US]
+08-03 22:28:12.599  5789  5789 I .burrowui.debug: AssetManager2(0x200c25a1b3dfe28) locale list changing from [] to [en-US]
+08-03 22:28:12.600  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b400e28) locale list changing from [] to [en-US]
+08-03 22:28:12.601  5789  5789 I .burrowui.debug: AssetManager2(0xc00c25a1b3fa228) locale list changing from [] to [en-US]
+08-03 22:28:12.603  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b3fbd28) locale list changing from [] to [en-US]
+08-03 22:28:12.604  5789  5789 I .burrowui.debug: AssetManager2(0x900c25a1b3fcf28) locale list changing from [] to [en-US]
+08-03 22:28:12.605  5789  5789 I .burrowui.debug: AssetManager2(0x200c25a1b3fba28) locale list changing from [] to [en-US]
+08-03 22:28:12.606  5789  5789 I .burrowui.debug: AssetManager2(0xd00c25a1b401728) locale list changing from [] to [en-US]
+08-03 22:28:12.608  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b3f9928) locale list changing from [] to [en-US]
+08-03 22:28:12.610  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b3fc928) locale list changing from [] to [en-US]
+08-03 22:28:12.611  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b3fe128) locale list changing from [] to [en-US]
+08-03 22:28:12.612  5789  5789 I .burrowui.debug: AssetManager2(0x700c25a1b3f8428) locale list changing from [] to [en-US]
+08-03 22:28:12.613  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b3f8728) locale list changing from [] to [en-US]
+08-03 22:28:12.614  5789  5789 I .burrowui.debug: AssetManager2(0xe00c25a1b3fcc28) locale list changing from [] to [en-US]
+08-03 22:28:12.616  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b3fd528) locale list changing from [] to [en-US]
+08-03 22:28:12.617  5789  5789 I .burrowui.debug: AssetManager2(0x300c25a1b3fdb28) locale list changing from [] to [en-US]
+08-03 22:28:12.618  5789  5789 I .burrowui.debug: AssetManager2(0x900c25a1b3fde28) locale list changing from [] to [en-US]
+08-03 22:28:12.620  5789  5789 I .burrowui.debug: AssetManager2(0xb00c25a1b3fff28) locale list changing from [] to [en-US]
+08-03 22:28:12.622  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b3f7528) locale list changing from [] to [en-US]
+08-03 22:28:12.623  5789  5789 I .burrowui.debug: AssetManager2(0x300c25a1b3f9c28) locale list changing from [] to [en-US]
+08-03 22:28:12.624  5789  5789 I .burrowui.debug: AssetManager2(0x700c25a1b3f9628) locale list changing from [] to [en-US]
+08-03 22:28:12.626  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b40ef28) locale list changing from [] to [en-US]
+08-03 22:28:12.627  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b415828) locale list changing from [] to [en-US]
+08-03 22:28:12.629  5789  5789 I .burrowui.debug: AssetManager2(0xd00c25a1b418e28) locale list changing from [] to [en-US]
+08-03 22:28:12.630  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b419d28) locale list changing from [] to [en-US]
+08-03 22:28:12.631  5789  5789 I .burrowui.debug: AssetManager2(0x300c25a1b40e928) locale list changing from [] to [en-US]
+08-03 22:28:12.632  5789  5789 I .burrowui.debug: AssetManager2(0x400c25a1b414328) locale list changing from [] to [en-US]
+08-03 22:28:12.634  5789  5789 I .burrowui.debug: AssetManager2(0xc00c25a1b417628) locale list changing from [] to [en-US]
+08-03 22:28:12.634  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b417f28) locale list changing from [] to [en-US]
+08-03 22:28:12.635  5789  5789 I .burrowui.debug: AssetManager2(0xe00c25a1b415228) locale list changing from [] to [en-US]
+08-03 22:28:12.636  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b413d28) locale list changing from [] to [en-US]
+08-03 22:28:12.637  5789  5789 I .burrowui.debug: AssetManager2(0xd00c25a1b40f828) locale list changing from [] to [en-US]
+08-03 22:28:12.638  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b410d28) locale list changing from [] to [en-US]
+08-03 22:28:12.640  5789  5789 I .burrowui.debug: AssetManager2(0xb00c25a1b411328) locale list changing from [] to [en-US]
+08-03 22:28:12.642  5789  5789 I .burrowui.debug: AssetManager2(0x700c25a1b414628) locale list changing from [] to [en-US]
+08-03 22:28:12.643  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b416d28) locale list changing from [] to [en-US]
+08-03 22:28:12.644  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b414f28) locale list changing from [] to [en-US]
+08-03 22:28:12.645  5789  5789 I .burrowui.debug: AssetManager2(0xc00c25a1b411f28) locale list changing from [] to [en-US]
+08-03 22:28:12.646  5789  5789 I .burrowui.debug: AssetManager2(0x800c25a1b40e628) locale list changing from [] to [en-US]
+08-03 22:28:12.647  5789  5789 I .burrowui.debug: AssetManager2(0x400c25a1b416428) locale list changing from [] to [en-US]
+08-03 22:28:12.648  5789  5789 I .burrowui.debug: AssetManager2(0x400c25a1b416a28) locale list changing from [] to [en-US]
+08-03 22:28:12.650  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b42ed28) locale list changing from [] to [en-US]
+08-03 22:28:12.651  5789  5789 I .burrowui.debug: AssetManager2(0x300c25a1b426928) locale list changing from [] to [en-US]
+08-03 22:28:12.652  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b42ff28) locale list changing from [] to [en-US]
+08-03 22:28:12.653  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b42c328) locale list changing from [] to [en-US]
+08-03 22:28:12.654  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b42b428) locale list changing from [] to [en-US]
+08-03 22:28:12.656  5789  5789 I .burrowui.debug: AssetManager2(0x900c25a1b42e128) locale list changing from [] to [en-US]
+08-03 22:28:12.657  5789  5789 I .burrowui.debug: AssetManager2(0x900c25a1b42a228) locale list changing from [] to [en-US]
+08-03 22:28:12.658  5789  5789 I .burrowui.debug: AssetManager2(0xc00c25a1b428128) locale list changing from [] to [en-US]
+08-03 22:28:12.659  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b42f628) locale list changing from [] to [en-US]
+08-03 22:28:12.660  5789  5789 I .burrowui.debug: AssetManager2(0xd00c25a1b427b28) locale list changing from [] to [en-US]
+08-03 22:28:12.662  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b427e28) locale list changing from [] to [en-US]
+08-03 22:28:12.663  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b429c28) locale list changing from [] to [en-US]
+08-03 22:28:12.664  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b42fc28) locale list changing from [] to [en-US]
+08-03 22:28:12.665  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b430228) locale list changing from [] to [en-US]
+08-03 22:28:12.666  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b430e28) locale list changing from [] to [en-US]
+08-03 22:28:12.667  5789  5789 I .burrowui.debug: AssetManager2(0xe00c25a1b426628) locale list changing from [] to [en-US]
+08-03 22:28:12.668  5789  5789 I .burrowui.debug: AssetManager2(0xd00c25a1b446728) locale list changing from [] to [en-US]
+08-03 22:28:12.669  5789  5789 I .burrowui.debug: AssetManager2(0xc00c25a1b440a28) locale list changing from [] to [en-US]
+08-03 22:28:12.670  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b43e928) locale list changing from [] to [en-US]
+08-03 22:28:12.671  5789  5789 I .burrowui.debug: AssetManager2(0x300c25a1b448b28) locale list changing from [] to [en-US]
+08-03 22:28:12.672  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b43fb28) locale list changing from [] to [en-US]
+08-03 22:28:12.673  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b440128) locale list changing from [] to [en-US]
+08-03 22:28:12.677  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b444328) locale list changing from [] to [en-US]
+08-03 22:28:12.678  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b442228) locale list changing from [] to [en-US]
+08-03 22:28:12.680  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b447c28) locale list changing from [] to [en-US]
+08-03 22:28:12.681  5789  5789 I .burrowui.debug: AssetManager2(0x900c25a1b443d28) locale list changing from [] to [en-US]
+08-03 22:28:12.682  5789  5789 I .burrowui.debug: AssetManager2(0xd00c25a1b446128) locale list changing from [] to [en-US]
+08-03 22:28:12.683  5789  5789 I .burrowui.debug: AssetManager2(0xe00c25a1b461128) locale list changing from [] to [en-US]
+08-03 22:28:12.685  5789  5789 I .burrowui.debug: AssetManager2(0x200c25a1b45bd28) locale list changing from [] to [en-US]
+08-03 22:28:12.685  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b458128) locale list changing from [] to [en-US]
+08-03 22:28:12.686  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b45e728) locale list changing from [] to [en-US]
+08-03 22:28:12.687  5789  5789 I .burrowui.debug: AssetManager2(0x900c25a1b45ea28) locale list changing from [] to [en-US]
+08-03 22:28:12.688  5789  5789 I .burrowui.debug: AssetManager2(0xc00c25a1b458728) locale list changing from [] to [en-US]
+08-03 22:28:12.690  5789  5789 I .burrowui.debug: AssetManager2(0xb00c25a1b45ab28) locale list changing from [] to [en-US]
+08-03 22:28:12.691  5789  5789 I .burrowui.debug: AssetManager2(0x300c25a1b45a528) locale list changing from [] to [en-US]
+08-03 22:28:12.691  5789  5789 I .burrowui.debug: AssetManager2(0x700c25a1b36cc28) locale list changing from [] to [en-US]
+08-03 22:28:12.692  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b36f328) locale list changing from [] to [en-US]
+08-03 22:28:12.694  5789  5789 I .burrowui.debug: AssetManager2(0xd00c25a1b369c28) locale list changing from [] to [en-US]
+08-03 22:28:12.695  5789  5789 I .burrowui.debug: AssetManager2(0x400c25a1b37f228) locale list changing from [] to [en-US]
+08-03 22:28:12.696  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b36e728) locale list changing from [] to [en-US]
+08-03 22:28:12.697  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b36cf28) locale list changing from [] to [en-US]
+08-03 22:28:12.698  5789  5789 I .burrowui.debug: AssetManager2(0x200c25a1b456328) locale list changing from [] to [en-US]
+08-03 22:28:12.699  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b368d28) locale list changing from [] to [en-US]
+08-03 22:28:12.700  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b45c628) locale list changing from [] to [en-US]
+08-03 22:28:12.701  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b397828) locale list changing from [] to [en-US]
+08-03 22:28:12.702  5789  5789 I .burrowui.debug: AssetManager2(0x900c25a1b36f928) locale list changing from [] to [en-US]
+08-03 22:28:12.703  5789  5789 I .burrowui.debug: AssetManager2(0x400c25a1b387f28) locale list changing from [] to [en-US]
+08-03 22:28:12.704  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b398428) locale list changing from [] to [en-US]
+08-03 22:28:12.705  5789  5789 I .burrowui.debug: AssetManager2(0x100c25a1b368728) locale list changing from [] to [en-US]
+08-03 22:28:12.706  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b380a28) locale list changing from [] to [en-US]
+08-03 22:28:12.707  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b3aef28) locale list changing from [] to [en-US]
+08-03 22:28:12.708  5789  5789 I .burrowui.debug: AssetManager2(0x500c25a1b37ec28) locale list changing from [] to [en-US]
+08-03 22:28:12.709  5789  5789 I .burrowui.debug: AssetManager2(0xd00c25a1b396c28) locale list changing from [] to [en-US]
+08-03 22:28:12.710  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b3b2b28) locale list changing from [] to [en-US]
+08-03 22:28:12.711  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b367b28) locale list changing from [] to [en-US]
+08-03 22:28:12.712  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b384328) locale list changing from [] to [en-US]
+08-03 22:28:12.714  5789  5789 I .burrowui.debug: AssetManager2(0xe00c25a1b3cc628) locale list changing from [] to [en-US]
+08-03 22:28:12.715  5789  5789 I .burrowui.debug: AssetManager2(0xb00c25a1b3b4028) locale list changing from [] to [en-US]
+08-03 22:28:12.716  5789  5789 I .burrowui.debug: AssetManager2(0x800c25a1b380128) locale list changing from [] to [en-US]
+08-03 22:28:12.717  5789  5789 I .burrowui.debug: AssetManager2(0xa00c25a1b477628) locale list changing from [] to [en-US]
+08-03 22:28:12.718  5789  5789 I .burrowui.debug: AssetManager2(0x600c25a1b474628) locale list changing from [] to [en-US]
+08-03 22:28:12.719  5789  5789 I .burrowui.debug: AssetManager2(0xc00c25a1b386d28) locale list changing from [] to [en-US]
+08-03 22:28:12.720  5789  5789 I .burrowui.debug: AssetManager2(0x200c25a1b39cf28) locale list changing from [] to [en-US]
+08-03 22:28:12.721  5789  5789 I .burrowui.debug: AssetManager2(0x700c25a1b3cc028) locale list changing from [] to [en-US]
+08-03 22:28:12.723  5789  5789 I .burrowui.debug: AssetManager2(0xf00c25a1b387928) locale list changing from [] to [en-US]
+08-03 22:28:12.723  5789  5789 I .burrowui.debug: AssetManager2(0x800c25a1b39b128) locale list changing from [] to [en-US]
+--------- switch to system
+08-03 22:28:12.727  5789  5789 E TransactionExecutor: Failed to execute the transaction: tId:-1388459466 ClientTransaction{
+08-03 22:28:12.727  5789  5789 E TransactionExecutor: tId:-1388459466   transactionItems=[
+08-03 22:28:12.727  5789  5789 E TransactionExecutor: tId:-1388459466     LaunchActivityItem{activityToken=android.os.BinderProxy@d90606b,intent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 xflg=0x4 cmp=com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity bnds=[25,231][284,706] },ident=138760440,info=ActivityInfo{dba38f0 com.hamsterbase.burrowui.MainActivity},curConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h907dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 199 - 1344, 2920) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.4329 fontWeightAdjustment=0},overrideConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h907dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 199 - 1344, 2920) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.2 fontWeightAdjustment=0},deviceId=0,referrer=com.android.launcher3,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,sceneTransitionInfo=null,profilerInfo=null,assistToken=android.os.BinderProxy@ea4d86d,shareableActivityToken=android.os.BinderProxy@76f8ca2,activityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1344, 2992), taskFragmentBounds=Rect(0, 0 - 1344, 2992)}}
+08-03 22:28:12.727  5789  5789 E TransactionExecutor: tId:-1388459466     ResumeActivityItem{mActivityToken=android.os.BinderProxy@d90606b,procState=-1,isForward=true,shouldSendCompatFakeFocus=false}
+08-03 22:28:12.727  5789  5789 E TransactionExecutor: tId:-1388459466     Target activity: com.hamsterbase.burrowui.MainActivity
+08-03 22:28:12.727  5789  5789 E TransactionExecutor: tId:-1388459466   ]
+08-03 22:28:12.727  5789  5789 E TransactionExecutor: tId:-1388459466 }
+--------- switch to main
+08-03 22:28:12.727  5789  5789 D AndroidRuntime: Shutting down VM
+--------- switch to crash
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: FATAL EXCEPTION: main
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: Process: com.hamsterbase.burrowui.debug, PID: 5789
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity}: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4293)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4480)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:222)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:133)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:103)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:80)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2832)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:248)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:338)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9106)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:593)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:948)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.updateAlphabeticalIndex(MainActivity.java:349)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.displaySelectedApps(MainActivity.java:241)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.onCreate(MainActivity.java:93)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9208)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9186)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1531)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4275)
+08-03 22:28:12.728  5789  5789 E AndroidRuntime: 	... 13 more
+--------- switch to main
+08-03 22:28:12.734  5789  5789 I Process : Sending signal. PID: 5789 SIG: 9
+08-03 22:28:15.880  5831  5831 I .burrowui.debug: Late-enabling -Xcheck:jni
+08-03 22:28:15.898  5831  5831 I .burrowui.debug: Using CollectorTypeCMC GC.
+08-03 22:28:15.904  5831  5831 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+08-03 22:28:15.919  5831  5831 D CompatChangeReporter: Compat change id reported: 242716250; UID 10380; state: ENABLED
+08-03 22:28:15.929  5831  5831 D nativeloader: Configuring clns-9 for other apk /data/app/~~HHtx-Fea4SiZ6EK4tl_ogg==/com.hamsterbase.burrowui.debug-7vkZbpVOIWttHho9S6veBg==/base.apk. target_sdk_version=34, uses_libraries=, library_path=/data/app/~~HHtx-Fea4SiZ6EK4tl_ogg==/com.hamsterbase.burrowui.debug-7vkZbpVOIWttHho9S6veBg==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.hamsterbase.burrowui.debug
+08-03 22:28:15.931  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b385528) locale list changing from [] to [en-US]
+08-03 22:28:15.935  5831  5831 V GraphicsEnvironment: Currently set values for:
+08-03 22:28:15.935  5831  5831 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
+08-03 22:28:15.935  5831  5831 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
+08-03 22:28:15.935  5831  5831 V GraphicsEnvironment: com.hamsterbase.burrowui.debug is not listed in per-application setting
+08-03 22:28:15.935  5831  5831 V GraphicsEnvironment: ANGLE allowlist from config: 
+08-03 22:28:15.935  5831  5831 V GraphicsEnvironment: com.hamsterbase.burrowui.debug is not listed in ANGLE allowlist or settings, returning default
+08-03 22:28:15.935  5831  5831 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+--------- switch to system
+08-03 22:28:15.946  5831  5847 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+--------- switch to main
+08-03 22:28:15.947  5831  5831 I .burrowui.debug: AssetManager2(0xc00c25a1b382b28) locale list changing from [] to [en-US]
+08-03 22:28:15.951  5831  5831 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+08-03 22:28:15.959  5831  5831 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+08-03 22:28:16.011  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b396628) locale list changing from [] to [en-US]
+08-03 22:28:16.014  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b396f28) locale list changing from [] to [en-US]
+08-03 22:28:16.016  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b399928) locale list changing from [] to [en-US]
+08-03 22:28:16.018  5831  5831 I .burrowui.debug: AssetManager2(0x200c25a1b399628) locale list changing from [] to [en-US]
+08-03 22:28:16.019  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b39b728) locale list changing from [] to [en-US]
+08-03 22:28:16.020  5831  5831 I .burrowui.debug: AssetManager2(0xa00c25a1b3a0828) locale list changing from [] to [en-US]
+08-03 22:28:16.021  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b39c628) locale list changing from [] to [en-US]
+08-03 22:28:16.022  5831  5831 I .burrowui.debug: AssetManager2(0x200c25a1b39cc28) locale list changing from [] to [en-US]
+08-03 22:28:16.026  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b39de28) locale list changing from [] to [en-US]
+08-03 22:28:16.027  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b3b5e28) locale list changing from [] to [en-US]
+08-03 22:28:16.028  5831  5831 I .burrowui.debug: AssetManager2(0x400c25a1b3b5828) locale list changing from [] to [en-US]
+08-03 22:28:16.030  5831  5831 I .burrowui.debug: AssetManager2(0xe00c25a1b3b9d28) locale list changing from [] to [en-US]
+08-03 22:28:16.031  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b3b4928) locale list changing from [] to [en-US]
+08-03 22:28:16.033  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b3b2528) locale list changing from [] to [en-US]
+08-03 22:28:16.034  5831  5831 I .burrowui.debug: AssetManager2(0x700c25a1b3b4c28) locale list changing from [] to [en-US]
+08-03 22:28:16.035  5831  5831 I .burrowui.debug: AssetManager2(0x200c25a1b3b7c28) locale list changing from [] to [en-US]
+08-03 22:28:16.037  5831  5831 I .burrowui.debug: AssetManager2(0xc00c25a1b3afb28) locale list changing from [] to [en-US]
+08-03 22:28:16.038  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b3b8228) locale list changing from [] to [en-US]
+08-03 22:28:16.040  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b3b0a28) locale list changing from [] to [en-US]
+08-03 22:28:16.042  5831  5831 I .burrowui.debug: AssetManager2(0x200c25a1b3b1328) locale list changing from [] to [en-US]
+08-03 22:28:16.043  5831  5831 I .burrowui.debug: AssetManager2(0xc00c25a1b3ae328) locale list changing from [] to [en-US]
+08-03 22:28:16.045  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b3cde28) locale list changing from [] to [en-US]
+08-03 22:28:16.046  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b3cc328) locale list changing from [] to [en-US]
+08-03 22:28:16.048  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b3cab28) locale list changing from [] to [en-US]
+08-03 22:28:16.049  5831  5831 I .burrowui.debug: AssetManager2(0xe00c25a1b3c6928) locale list changing from [] to [en-US]
+08-03 22:28:16.050  5831  5831 I .burrowui.debug: AssetManager2(0x300c25a1b3cb128) locale list changing from [] to [en-US]
+08-03 22:28:16.052  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b3cb428) locale list changing from [] to [en-US]
+08-03 22:28:16.053  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b3c7228) locale list changing from [] to [en-US]
+08-03 22:28:16.055  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b3cd528) locale list changing from [] to [en-US]
+08-03 22:28:16.056  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b3d1728) locale list changing from [] to [en-US]
+08-03 22:28:16.056  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b3cfc28) locale list changing from [] to [en-US]
+08-03 22:28:16.059  5831  5831 I .burrowui.debug: AssetManager2(0xe00c25a1b3c6328) locale list changing from [] to [en-US]
+08-03 22:28:16.060  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b3c7e28) locale list changing from [] to [en-US]
+08-03 22:28:16.063  5831  5831 I .burrowui.debug: AssetManager2(0xd00c25a1b3c7828) locale list changing from [] to [en-US]
+08-03 22:28:16.064  5831  5831 I .burrowui.debug: AssetManager2(0x800c25a1b3d0828) locale list changing from [] to [en-US]
+08-03 22:28:16.066  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b3c6628) locale list changing from [] to [en-US]
+08-03 22:28:16.067  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b3cbd28) locale list changing from [] to [en-US]
+08-03 22:28:16.068  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b3e8228) locale list changing from [] to [en-US]
+08-03 22:28:16.069  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b3e7928) locale list changing from [] to [en-US]
+08-03 22:28:16.070  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b3e2228) locale list changing from [] to [en-US]
+08-03 22:28:16.071  5831  5831 I .burrowui.debug: AssetManager2(0x200c25a1b3e6a28) locale list changing from [] to [en-US]
+08-03 22:28:16.072  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b3dec28) locale list changing from [] to [en-US]
+08-03 22:28:16.073  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b3df828) locale list changing from [] to [en-US]
+08-03 22:28:16.074  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b3e0128) locale list changing from [] to [en-US]
+08-03 22:28:16.076  5831  5831 I .burrowui.debug: AssetManager2(0x800c25a1b3df228) locale list changing from [] to [en-US]
+08-03 22:28:16.077  5831  5831 I .burrowui.debug: AssetManager2(0x800c25a1b3e8b28) locale list changing from [] to [en-US]
+08-03 22:28:16.078  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b3e2b28) locale list changing from [] to [en-US]
+08-03 22:28:16.079  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b3e9128) locale list changing from [] to [en-US]
+08-03 22:28:16.081  5831  5831 I .burrowui.debug: AssetManager2(0x300c25a1b3e2828) locale list changing from [] to [en-US]
+08-03 22:28:16.082  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b3e7328) locale list changing from [] to [en-US]
+08-03 22:28:16.083  5831  5831 I .burrowui.debug: AssetManager2(0xb00c25a1b3e4028) locale list changing from [] to [en-US]
+08-03 22:28:16.084  5831  5831 I .burrowui.debug: AssetManager2(0xa00c25a1b3e9d28) locale list changing from [] to [en-US]
+08-03 22:28:16.085  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b3de028) locale list changing from [] to [en-US]
+08-03 22:28:16.086  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b3fa228) locale list changing from [] to [en-US]
+08-03 22:28:16.087  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b3f6928) locale list changing from [] to [en-US]
+08-03 22:28:16.089  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b3fdb28) locale list changing from [] to [en-US]
+08-03 22:28:16.090  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b3fab28) locale list changing from [] to [en-US]
+08-03 22:28:16.091  5831  5831 I .burrowui.debug: AssetManager2(0xe00c25a1b3f6628) locale list changing from [] to [en-US]
+08-03 22:28:16.092  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b3f9328) locale list changing from [] to [en-US]
+08-03 22:28:16.094  5831  5831 I .burrowui.debug: AssetManager2(0xe00c25a1b3f8d28) locale list changing from [] to [en-US]
+08-03 22:28:16.095  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b3f9628) locale list changing from [] to [en-US]
+08-03 22:28:16.096  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b3fba28) locale list changing from [] to [en-US]
+08-03 22:28:16.097  5831  5831 I .burrowui.debug: AssetManager2(0xc00c25a1b3fc928) locale list changing from [] to [en-US]
+08-03 22:28:16.099  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b3ffc28) locale list changing from [] to [en-US]
+08-03 22:28:16.099  5831  5831 I .burrowui.debug: AssetManager2(0x300c25a1b3fde28) locale list changing from [] to [en-US]
+08-03 22:28:16.101  5831  5831 I .burrowui.debug: AssetManager2(0xb00c25a1b3ff928) locale list changing from [] to [en-US]
+08-03 22:28:16.102  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b3f9f28) locale list changing from [] to [en-US]
+08-03 22:28:16.103  5831  5831 I .burrowui.debug: AssetManager2(0xd00c25a1b3f9028) locale list changing from [] to [en-US]
+08-03 22:28:16.105  5831  5831 I .burrowui.debug: AssetManager2(0xa00c25a1b3fe728) locale list changing from [] to [en-US]
+08-03 22:28:16.106  5831  5831 I .burrowui.debug: AssetManager2(0xb00c25a1b400e28) locale list changing from [] to [en-US]
+08-03 22:28:16.108  5831  5831 I .burrowui.debug: AssetManager2(0xe00c25a1b3ff328) locale list changing from [] to [en-US]
+08-03 22:28:16.109  5831  5831 I .burrowui.debug: AssetManager2(0x300c25a1b3f7e28) locale list changing from [] to [en-US]
+08-03 22:28:16.110  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b410d28) locale list changing from [] to [en-US]
+08-03 22:28:16.111  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b414c28) locale list changing from [] to [en-US]
+08-03 22:28:16.112  5831  5831 I .burrowui.debug: AssetManager2(0x200c25a1b418b28) locale list changing from [] to [en-US]
+08-03 22:28:16.113  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b418528) locale list changing from [] to [en-US]
+08-03 22:28:16.115  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b419a28) locale list changing from [] to [en-US]
+08-03 22:28:16.116  5831  5831 I .burrowui.debug: AssetManager2(0xc00c25a1b416128) locale list changing from [] to [en-US]
+08-03 22:28:16.117  5831  5831 I .burrowui.debug: AssetManager2(0xa00c25a1b418228) locale list changing from [] to [en-US]
+08-03 22:28:16.117  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b415528) locale list changing from [] to [en-US]
+08-03 22:28:16.118  5831  5831 I .burrowui.debug: AssetManager2(0x200c25a1b413a28) locale list changing from [] to [en-US]
+08-03 22:28:16.119  5831  5831 I .burrowui.debug: AssetManager2(0x800c25a1b415828) locale list changing from [] to [en-US]
+08-03 22:28:16.120  5831  5831 I .burrowui.debug: AssetManager2(0xc00c25a1b419128) locale list changing from [] to [en-US]
+08-03 22:28:16.121  5831  5831 I .burrowui.debug: AssetManager2(0x400c25a1b417628) locale list changing from [] to [en-US]
+08-03 22:28:16.124  5831  5831 I .burrowui.debug: AssetManager2(0x300c25a1b414928) locale list changing from [] to [en-US]
+08-03 22:28:16.125  5831  5831 I .burrowui.debug: AssetManager2(0xa00c25a1b412828) locale list changing from [] to [en-US]
+08-03 22:28:16.126  5831  5831 I .burrowui.debug: AssetManager2(0x400c25a1b415b28) locale list changing from [] to [en-US]
+08-03 22:28:16.128  5831  5831 I .burrowui.debug: AssetManager2(0xd00c25a1b410428) locale list changing from [] to [en-US]
+08-03 22:28:16.129  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b40f828) locale list changing from [] to [en-US]
+08-03 22:28:16.130  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b40fb28) locale list changing from [] to [en-US]
+08-03 22:28:16.131  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b410728) locale list changing from [] to [en-US]
+08-03 22:28:16.132  5831  5831 I .burrowui.debug: AssetManager2(0xa00c25a1b411c28) locale list changing from [] to [en-US]
+08-03 22:28:16.133  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b42c928) locale list changing from [] to [en-US]
+08-03 22:28:16.134  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b42cc28) locale list changing from [] to [en-US]
+08-03 22:28:16.136  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b427b28) locale list changing from [] to [en-US]
+08-03 22:28:16.137  5831  5831 I .burrowui.debug: AssetManager2(0x800c25a1b42b428) locale list changing from [] to [en-US]
+08-03 22:28:16.138  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b431728) locale list changing from [] to [en-US]
+08-03 22:28:16.140  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b429c28) locale list changing from [] to [en-US]
+08-03 22:28:16.141  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b431128) locale list changing from [] to [en-US]
+08-03 22:28:16.142  5831  5831 I .burrowui.debug: AssetManager2(0xa00c25a1b42cf28) locale list changing from [] to [en-US]
+08-03 22:28:16.143  5831  5831 I .burrowui.debug: AssetManager2(0xc00c25a1b42bd28) locale list changing from [] to [en-US]
+08-03 22:28:16.145  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b429628) locale list changing from [] to [en-US]
+08-03 22:28:16.146  5831  5831 I .burrowui.debug: AssetManager2(0xb00c25a1b426628) locale list changing from [] to [en-US]
+08-03 22:28:16.147  5831  5831 I .burrowui.debug: AssetManager2(0xd00c25a1b429028) locale list changing from [] to [en-US]
+08-03 22:28:16.148  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b42b728) locale list changing from [] to [en-US]
+08-03 22:28:16.149  5831  5831 I .burrowui.debug: AssetManager2(0x300c25a1b42e728) locale list changing from [] to [en-US]
+08-03 22:28:16.150  5831  5831 I .burrowui.debug: AssetManager2(0x300c25a1b42ae28) locale list changing from [] to [en-US]
+08-03 22:28:16.151  5831  5831 I .burrowui.debug: AssetManager2(0x200c25a1b42c628) locale list changing from [] to [en-US]
+08-03 22:28:16.152  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b446a28) locale list changing from [] to [en-US]
+08-03 22:28:16.153  5831  5831 I .burrowui.debug: AssetManager2(0xb00c25a1b448228) locale list changing from [] to [en-US]
+08-03 22:28:16.154  5831  5831 I .burrowui.debug: AssetManager2(0x700c25a1b447f28) locale list changing from [] to [en-US]
+08-03 22:28:16.156  5831  5831 I .burrowui.debug: AssetManager2(0xe00c25a1b447928) locale list changing from [] to [en-US]
+08-03 22:28:16.157  5831  5831 I .burrowui.debug: AssetManager2(0xd00c25a1b442528) locale list changing from [] to [en-US]
+08-03 22:28:16.158  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b442b28) locale list changing from [] to [en-US]
+08-03 22:28:16.162  5831  5831 I .burrowui.debug: AssetManager2(0x300c25a1b448e28) locale list changing from [] to [en-US]
+08-03 22:28:16.163  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b447c28) locale list changing from [] to [en-US]
+08-03 22:28:16.165  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b43e928) locale list changing from [] to [en-US]
+08-03 22:28:16.166  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b444928) locale list changing from [] to [en-US]
+08-03 22:28:16.167  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b445528) locale list changing from [] to [en-US]
+08-03 22:28:16.169  5831  5831 I .burrowui.debug: AssetManager2(0x600c25a1b45f928) locale list changing from [] to [en-US]
+08-03 22:28:16.170  5831  5831 I .burrowui.debug: AssetManager2(0xb00c25a1b45c328) locale list changing from [] to [en-US]
+08-03 22:28:16.171  5831  5831 I .burrowui.debug: AssetManager2(0xb00c25a1b36cc28) locale list changing from [] to [en-US]
+08-03 22:28:16.172  5831  5831 I .burrowui.debug: AssetManager2(0xb00c25a1b45c928) locale list changing from [] to [en-US]
+08-03 22:28:16.173  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b36f628) locale list changing from [] to [en-US]
+08-03 22:28:16.174  5831  5831 I .burrowui.debug: AssetManager2(0x100c25a1b456928) locale list changing from [] to [en-US]
+08-03 22:28:16.175  5831  5831 I .burrowui.debug: AssetManager2(0xc00c25a1b36c928) locale list changing from [] to [en-US]
+08-03 22:28:16.176  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b366328) locale list changing from [] to [en-US]
+08-03 22:28:16.177  5831  5831 I .burrowui.debug: AssetManager2(0xe00c25a1b36d528) locale list changing from [] to [en-US]
+08-03 22:28:16.178  5831  5831 I .burrowui.debug: AssetManager2(0xc00c25a1b37ef28) locale list changing from [] to [en-US]
+08-03 22:28:16.179  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b384028) locale list changing from [] to [en-US]
+08-03 22:28:16.180  5831  5831 I .burrowui.debug: AssetManager2(0x800c25a1b36a528) locale list changing from [] to [en-US]
+08-03 22:28:16.181  5831  5831 I .burrowui.debug: AssetManager2(0x800c25a1b387028) locale list changing from [] to [en-US]
+08-03 22:28:16.182  5831  5831 I .burrowui.debug: AssetManager2(0xe00c25a1b3a1428) locale list changing from [] to [en-US]
+08-03 22:28:16.183  5831  5831 I .burrowui.debug: AssetManager2(0xe00c25a1b389428) locale list changing from [] to [en-US]
+08-03 22:28:16.184  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b380a28) locale list changing from [] to [en-US]
+08-03 22:28:16.185  5831  5831 I .burrowui.debug: AssetManager2(0x800c25a1b45ea28) locale list changing from [] to [en-US]
+08-03 22:28:16.186  5831  5831 I .burrowui.debug: AssetManager2(0xa00c25a1b37f228) locale list changing from [] to [en-US]
+08-03 22:28:16.187  5831  5831 I .burrowui.debug: AssetManager2(0x400c25a1b36d828) locale list changing from [] to [en-US]
+08-03 22:28:16.188  5831  5831 I .burrowui.debug: AssetManager2(0xd00c25a1b387c28) locale list changing from [] to [en-US]
+08-03 22:28:16.189  5831  5831 I .burrowui.debug: AssetManager2(0x900c25a1b39d228) locale list changing from [] to [en-US]
+08-03 22:28:16.190  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b458428) locale list changing from [] to [en-US]
+08-03 22:28:16.192  5831  5831 I .burrowui.debug: AssetManager2(0x300c25a1b3b7328) locale list changing from [] to [en-US]
+08-03 22:28:16.193  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b36b128) locale list changing from [] to [en-US]
+08-03 22:28:16.194  5831  5831 I .burrowui.debug: AssetManager2(0x200c25a1b366928) locale list changing from [] to [en-US]
+08-03 22:28:16.195  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b366628) locale list changing from [] to [en-US]
+08-03 22:28:16.196  5831  5831 I .burrowui.debug: AssetManager2(0xf00c25a1b397e28) locale list changing from [] to [en-US]
+08-03 22:28:16.197  5831  5831 I .burrowui.debug: AssetManager2(0x700c25a1b36ff28) locale list changing from [] to [en-US]
+08-03 22:28:16.198  5831  5831 I .burrowui.debug: AssetManager2(0x800c25a1b3b1928) locale list changing from [] to [en-US]
+08-03 22:28:16.200  5831  5831 I .burrowui.debug: AssetManager2(0xe00c25a1b3b6428) locale list changing from [] to [en-US]
+08-03 22:28:16.201  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b3b6728) locale list changing from [] to [en-US]
+08-03 22:28:16.202  5831  5831 I .burrowui.debug: AssetManager2(0x800c25a1b387928) locale list changing from [] to [en-US]
+08-03 22:28:16.203  5831  5831 I .burrowui.debug: AssetManager2(0x200c25a1b368128) locale list changing from [] to [en-US]
+08-03 22:28:16.205  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b472e28) locale list changing from [] to [en-US]
+08-03 22:28:16.206  5831  5831 I .burrowui.debug: AssetManager2(0xa00c25a1b474928) locale list changing from [] to [en-US]
+08-03 22:28:16.207  5831  5831 I .burrowui.debug: AssetManager2(0x400c25a1b3d0e28) locale list changing from [] to [en-US]
+08-03 22:28:16.208  5831  5831 I .burrowui.debug: AssetManager2(0x700c25a1b386128) locale list changing from [] to [en-US]
+08-03 22:28:16.209  5831  5831 I .burrowui.debug: AssetManager2(0x500c25a1b396028) locale list changing from [] to [en-US]
+08-03 22:28:16.210  5831  5831 I .burrowui.debug: AssetManager2(0xd00c25a1b3b4628) locale list changing from [] to [en-US]
+--------- switch to system
+08-03 22:28:16.214  5831  5831 E TransactionExecutor: Failed to execute the transaction: tId:-1828175786 ClientTransaction{
+08-03 22:28:16.214  5831  5831 E TransactionExecutor: tId:-1828175786   transactionItems=[
+08-03 22:28:16.214  5831  5831 E TransactionExecutor: tId:-1828175786     LaunchActivityItem{activityToken=android.os.BinderProxy@d90606b,intent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 xflg=0x4 cmp=com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity bnds=[25,231][284,706] },ident=39663112,info=ActivityInfo{dba38f0 com.hamsterbase.burrowui.MainActivity},curConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h907dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 199 - 1344, 2920) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.4330 fontWeightAdjustment=0},overrideConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h907dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 199 - 1344, 2920) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.2 fontWeightAdjustment=0},deviceId=0,referrer=com.android.launcher3,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,sceneTransitionInfo=null,profilerInfo=null,assistToken=android.os.BinderProxy@ea4d86d,shareableActivityToken=android.os.BinderProxy@76f8ca2,activityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1344, 2992), taskFragmentBounds=Rect(0, 0 - 1344, 2992)}}
+08-03 22:28:16.214  5831  5831 E TransactionExecutor: tId:-1828175786     ResumeActivityItem{mActivityToken=android.os.BinderProxy@d90606b,procState=-1,isForward=true,shouldSendCompatFakeFocus=false}
+08-03 22:28:16.214  5831  5831 E TransactionExecutor: tId:-1828175786     Target activity: com.hamsterbase.burrowui.MainActivity
+08-03 22:28:16.214  5831  5831 E TransactionExecutor: tId:-1828175786   ]
+08-03 22:28:16.214  5831  5831 E TransactionExecutor: tId:-1828175786 }
+--------- switch to main
+08-03 22:28:16.214  5831  5831 D AndroidRuntime: Shutting down VM
+--------- switch to crash
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: FATAL EXCEPTION: main
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: Process: com.hamsterbase.burrowui.debug, PID: 5831
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity}: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4293)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4480)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:222)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:133)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:103)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:80)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2832)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:248)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:338)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9106)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:593)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:948)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.updateAlphabeticalIndex(MainActivity.java:349)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.displaySelectedApps(MainActivity.java:241)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.onCreate(MainActivity.java:93)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9208)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9186)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1531)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4275)
+08-03 22:28:16.215  5831  5831 E AndroidRuntime: 	... 13 more
+--------- switch to main
+08-03 22:28:16.221  5831  5831 I Process : Sending signal. PID: 5831 SIG: 9
+08-03 22:33:51.238  6491  6491 I .burrowui.debug: Late-enabling -Xcheck:jni
+08-03 22:33:51.257  6491  6491 I .burrowui.debug: Using CollectorTypeCMC GC.
+08-03 22:33:51.264  6491  6491 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+08-03 22:33:51.289  6491  6491 D nativeloader: Configuring clns-9 for other apk /data/app/~~nXIbiEMR_K6L1zu6qnHOgw==/com.hamsterbase.burrowui.debug--9Id5f92VkTUI3uWkdOXMg==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~nXIbiEMR_K6L1zu6qnHOgw==/com.hamsterbase.burrowui.debug--9Id5f92VkTUI3uWkdOXMg==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.hamsterbase.burrowui.debug
+08-03 22:33:51.292  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b382828) locale list changing from [] to [en-US]
+08-03 22:33:51.298  6491  6491 V GraphicsEnvironment: Currently set values for:
+08-03 22:33:51.298  6491  6491 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
+08-03 22:33:51.298  6491  6491 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
+08-03 22:33:51.298  6491  6491 V GraphicsEnvironment: com.hamsterbase.burrowui.debug is not listed in per-application setting
+08-03 22:33:51.298  6491  6491 V GraphicsEnvironment: ANGLE allowlist from config: 
+08-03 22:33:51.298  6491  6491 V GraphicsEnvironment: com.hamsterbase.burrowui.debug is not listed in ANGLE allowlist or settings, returning default
+08-03 22:33:51.298  6491  6491 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+--------- switch to system
+08-03 22:33:51.309  6491  6507 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+--------- switch to main
+08-03 22:33:51.311  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b385228) locale list changing from [] to [en-US]
+08-03 22:33:51.315  6491  6491 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+08-03 22:33:51.323  6491  6491 D CompatChangeReporter: Compat change id reported: 377864165; UID 10380; state: ENABLED
+08-03 22:33:51.324  6491  6491 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+08-03 22:33:51.374  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b3a1428) locale list changing from [] to [en-US]
+08-03 22:33:51.378  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b39ba28) locale list changing from [] to [en-US]
+08-03 22:33:51.380  6491  6491 I .burrowui.debug: AssetManager2(0xd00c25a1b39f328) locale list changing from [] to [en-US]
+08-03 22:33:51.381  6491  6491 I .burrowui.debug: AssetManager2(0x400c25a1b39a828) locale list changing from [] to [en-US]
+08-03 22:33:51.382  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b398d28) locale list changing from [] to [en-US]
+08-03 22:33:51.383  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b396f28) locale list changing from [] to [en-US]
+08-03 22:33:51.385  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b396928) locale list changing from [] to [en-US]
+08-03 22:33:51.386  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b3a0228) locale list changing from [] to [en-US]
+08-03 22:33:51.389  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b396c28) locale list changing from [] to [en-US]
+08-03 22:33:51.390  6491  6491 I .burrowui.debug: AssetManager2(0x500c25a1b3b1f28) locale list changing from [] to [en-US]
+08-03 22:33:51.391  6491  6491 I .burrowui.debug: AssetManager2(0x200c25a1b3b7628) locale list changing from [] to [en-US]
+08-03 22:33:51.393  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b3b4328) locale list changing from [] to [en-US]
+08-03 22:33:51.395  6491  6491 I .burrowui.debug: AssetManager2(0xd00c25a1b3afb28) locale list changing from [] to [en-US]
+08-03 22:33:51.396  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b3ae328) locale list changing from [] to [en-US]
+08-03 22:33:51.398  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b3b4628) locale list changing from [] to [en-US]
+08-03 22:33:51.399  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b3ae928) locale list changing from [] to [en-US]
+08-03 22:33:51.400  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b3aef28) locale list changing from [] to [en-US]
+08-03 22:33:51.401  6491  6491 I .burrowui.debug: AssetManager2(0x700c25a1b3b3428) locale list changing from [] to [en-US]
+08-03 22:33:51.404  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b3b2828) locale list changing from [] to [en-US]
+08-03 22:33:51.405  6491  6491 I .burrowui.debug: AssetManager2(0xd00c25a1b3b0728) locale list changing from [] to [en-US]
+08-03 22:33:51.407  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b3b1328) locale list changing from [] to [en-US]
+08-03 22:33:51.408  6491  6491 I .burrowui.debug: AssetManager2(0x600c25a1b3c9928) locale list changing from [] to [en-US]
+08-03 22:33:51.409  6491  6491 I .burrowui.debug: AssetManager2(0xe00c25a1b3d1428) locale list changing from [] to [en-US]
+08-03 22:33:51.411  6491  6491 I .burrowui.debug: AssetManager2(0xe00c25a1b3cf328) locale list changing from [] to [en-US]
+08-03 22:33:51.412  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b3cff28) locale list changing from [] to [en-US]
+08-03 22:33:51.414  6491  6491 I .burrowui.debug: AssetManager2(0xd00c25a1b3cd828) locale list changing from [] to [en-US]
+08-03 22:33:51.415  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b3c6c28) locale list changing from [] to [en-US]
+08-03 22:33:51.417  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b3cf928) locale list changing from [] to [en-US]
+08-03 22:33:51.418  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b3d0528) locale list changing from [] to [en-US]
+08-03 22:33:51.419  6491  6491 I .burrowui.debug: AssetManager2(0x200c25a1b3cab28) locale list changing from [] to [en-US]
+08-03 22:33:51.420  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b3cae28) locale list changing from [] to [en-US]
+08-03 22:33:51.423  6491  6491 I .burrowui.debug: AssetManager2(0x800c25a1b3c9328) locale list changing from [] to [en-US]
+08-03 22:33:51.424  6491  6491 I .burrowui.debug: AssetManager2(0x700c25a1b3ccc28) locale list changing from [] to [en-US]
+08-03 22:33:51.426  6491  6491 I .burrowui.debug: AssetManager2(0x200c25a1b3cc328) locale list changing from [] to [en-US]
+08-03 22:33:51.427  6491  6491 I .burrowui.debug: AssetManager2(0x400c25a1b3cb128) locale list changing from [] to [en-US]
+08-03 22:33:51.429  6491  6491 I .burrowui.debug: AssetManager2(0xb00c25a1b3ccf28) locale list changing from [] to [en-US]
+08-03 22:33:51.430  6491  6491 I .burrowui.debug: AssetManager2(0x500c25a1b3cd228) locale list changing from [] to [en-US]
+08-03 22:33:51.431  6491  6491 I .burrowui.debug: AssetManager2(0xd00c25a1b3e4328) locale list changing from [] to [en-US]
+08-03 22:33:51.432  6491  6491 I .burrowui.debug: AssetManager2(0x800c25a1b3e1628) locale list changing from [] to [en-US]
+08-03 22:33:51.433  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b3e6a28) locale list changing from [] to [en-US]
+08-03 22:33:51.434  6491  6491 I .burrowui.debug: AssetManager2(0x800c25a1b3e6128) locale list changing from [] to [en-US]
+08-03 22:33:51.435  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b3df528) locale list changing from [] to [en-US]
+08-03 22:33:51.436  6491  6491 I .burrowui.debug: AssetManager2(0x800c25a1b3e0a28) locale list changing from [] to [en-US]
+08-03 22:33:51.437  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b3e4028) locale list changing from [] to [en-US]
+08-03 22:33:51.439  6491  6491 I .burrowui.debug: AssetManager2(0xb00c25a1b3dfe28) locale list changing from [] to [en-US]
+08-03 22:33:51.440  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b3e2528) locale list changing from [] to [en-US]
+08-03 22:33:51.441  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b3e1928) locale list changing from [] to [en-US]
+08-03 22:33:51.442  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b3e8b28) locale list changing from [] to [en-US]
+08-03 22:33:51.443  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b3e9728) locale list changing from [] to [en-US]
+08-03 22:33:51.445  6491  6491 I .burrowui.debug: AssetManager2(0x200c25a1b3e1028) locale list changing from [] to [en-US]
+08-03 22:33:51.446  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b3e4c28) locale list changing from [] to [en-US]
+08-03 22:33:51.447  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b3e4f28) locale list changing from [] to [en-US]
+08-03 22:33:51.448  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b3e5828) locale list changing from [] to [en-US]
+08-03 22:33:51.449  6491  6491 I .burrowui.debug: AssetManager2(0xb00c25a1b3e8528) locale list changing from [] to [en-US]
+08-03 22:33:51.450  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b3ff928) locale list changing from [] to [en-US]
+08-03 22:33:51.452  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b3f8128) locale list changing from [] to [en-US]
+08-03 22:33:51.453  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b3fbd28) locale list changing from [] to [en-US]
+08-03 22:33:51.453  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b3f7228) locale list changing from [] to [en-US]
+08-03 22:33:51.454  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b3ff028) locale list changing from [] to [en-US]
+08-03 22:33:51.456  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b3f7e28) locale list changing from [] to [en-US]
+08-03 22:33:51.457  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b3f6028) locale list changing from [] to [en-US]
+08-03 22:33:51.458  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b400528) locale list changing from [] to [en-US]
+08-03 22:33:51.459  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b3fa828) locale list changing from [] to [en-US]
+08-03 22:33:51.460  6491  6491 I .burrowui.debug: AssetManager2(0x400c25a1b3f9f28) locale list changing from [] to [en-US]
+08-03 22:33:51.461  6491  6491 I .burrowui.debug: AssetManager2(0x500c25a1b3fed28) locale list changing from [] to [en-US]
+08-03 22:33:51.463  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b400e28) locale list changing from [] to [en-US]
+08-03 22:33:51.464  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b3ff328) locale list changing from [] to [en-US]
+08-03 22:33:51.465  6491  6491 I .burrowui.debug: AssetManager2(0x400c25a1b3ff628) locale list changing from [] to [en-US]
+08-03 22:33:51.467  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b3fe128) locale list changing from [] to [en-US]
+08-03 22:33:51.468  6491  6491 I .burrowui.debug: AssetManager2(0x200c25a1b3ffc28) locale list changing from [] to [en-US]
+08-03 22:33:51.469  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b3fb728) locale list changing from [] to [en-US]
+08-03 22:33:51.470  6491  6491 I .burrowui.debug: AssetManager2(0x400c25a1b3f6c28) locale list changing from [] to [en-US]
+08-03 22:33:51.472  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b413128) locale list changing from [] to [en-US]
+08-03 22:33:51.473  6491  6491 I .burrowui.debug: AssetManager2(0xe00c25a1b414928) locale list changing from [] to [en-US]
+08-03 22:33:51.474  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b419428) locale list changing from [] to [en-US]
+08-03 22:33:51.475  6491  6491 I .burrowui.debug: AssetManager2(0x400c25a1b411328) locale list changing from [] to [en-US]
+08-03 22:33:51.477  6491  6491 I .burrowui.debug: AssetManager2(0x700c25a1b412e28) locale list changing from [] to [en-US]
+08-03 22:33:51.478  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b415228) locale list changing from [] to [en-US]
+08-03 22:33:51.479  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b415528) locale list changing from [] to [en-US]
+08-03 22:33:51.480  6491  6491 I .burrowui.debug: AssetManager2(0x700c25a1b415b28) locale list changing from [] to [en-US]
+08-03 22:33:51.481  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b40e328) locale list changing from [] to [en-US]
+08-03 22:33:51.482  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b417328) locale list changing from [] to [en-US]
+08-03 22:33:51.483  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b411628) locale list changing from [] to [en-US]
+08-03 22:33:51.484  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b40e628) locale list changing from [] to [en-US]
+08-03 22:33:51.487  6491  6491 I .burrowui.debug: AssetManager2(0x600c25a1b412828) locale list changing from [] to [en-US]
+08-03 22:33:51.489  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b416728) locale list changing from [] to [en-US]
+08-03 22:33:51.491  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b410428) locale list changing from [] to [en-US]
+08-03 22:33:51.492  6491  6491 I .burrowui.debug: AssetManager2(0x600c25a1b40e028) locale list changing from [] to [en-US]
+08-03 22:33:51.494  6491  6491 I .burrowui.debug: AssetManager2(0x700c25a1b412528) locale list changing from [] to [en-US]
+08-03 22:33:51.495  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b418528) locale list changing from [] to [en-US]
+08-03 22:33:51.496  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b410d28) locale list changing from [] to [en-US]
+08-03 22:33:51.497  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b412228) locale list changing from [] to [en-US]
+08-03 22:33:51.499  6491  6491 I .burrowui.debug: AssetManager2(0x800c25a1b427e28) locale list changing from [] to [en-US]
+08-03 22:33:51.500  6491  6491 I .burrowui.debug: AssetManager2(0xb00c25a1b42e128) locale list changing from [] to [en-US]
+08-03 22:33:51.501  6491  6491 I .burrowui.debug: AssetManager2(0x700c25a1b426628) locale list changing from [] to [en-US]
+08-03 22:33:51.503  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b42f928) locale list changing from [] to [en-US]
+08-03 22:33:51.504  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b42f628) locale list changing from [] to [en-US]
+08-03 22:33:51.506  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b428428) locale list changing from [] to [en-US]
+08-03 22:33:51.507  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b42a828) locale list changing from [] to [en-US]
+08-03 22:33:51.508  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b42c628) locale list changing from [] to [en-US]
+08-03 22:33:51.509  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b42a228) locale list changing from [] to [en-US]
+08-03 22:33:51.511  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b426028) locale list changing from [] to [en-US]
+08-03 22:33:51.513  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b428128) locale list changing from [] to [en-US]
+08-03 22:33:51.514  6491  6491 I .burrowui.debug: AssetManager2(0x600c25a1b42d828) locale list changing from [] to [en-US]
+08-03 22:33:51.515  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b42ea28) locale list changing from [] to [en-US]
+08-03 22:33:51.516  6491  6491 I .burrowui.debug: AssetManager2(0x500c25a1b42f328) locale list changing from [] to [en-US]
+08-03 22:33:51.517  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b42b728) locale list changing from [] to [en-US]
+08-03 22:33:51.518  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b42ba28) locale list changing from [] to [en-US]
+08-03 22:33:51.519  6491  6491 I .burrowui.debug: AssetManager2(0x500c25a1b443a28) locale list changing from [] to [en-US]
+08-03 22:33:51.520  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b442e28) locale list changing from [] to [en-US]
+08-03 22:33:51.522  6491  6491 I .burrowui.debug: AssetManager2(0xb00c25a1b448b28) locale list changing from [] to [en-US]
+08-03 22:33:51.523  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b446d28) locale list changing from [] to [en-US]
+08-03 22:33:51.524  6491  6491 I .burrowui.debug: AssetManager2(0xb00c25a1b449728) locale list changing from [] to [en-US]
+08-03 22:33:51.525  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b443728) locale list changing from [] to [en-US]
+08-03 22:33:51.529  6491  6491 I .burrowui.debug: AssetManager2(0x500c25a1b449d28) locale list changing from [] to [en-US]
+08-03 22:33:51.531  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b444f28) locale list changing from [] to [en-US]
+08-03 22:33:51.532  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b43ef28) locale list changing from [] to [en-US]
+08-03 22:33:51.533  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b441f28) locale list changing from [] to [en-US]
+08-03 22:33:51.534  6491  6491 I .burrowui.debug: AssetManager2(0x600c25a1b442b28) locale list changing from [] to [en-US]
+08-03 22:33:51.536  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b458a28) locale list changing from [] to [en-US]
+08-03 22:33:51.537  6491  6491 I .burrowui.debug: AssetManager2(0x500c25a1b45c328) locale list changing from [] to [en-US]
+08-03 22:33:51.538  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b457b28) locale list changing from [] to [en-US]
+08-03 22:33:51.539  6491  6491 I .burrowui.debug: AssetManager2(0x600c25a1b456028) locale list changing from [] to [en-US]
+08-03 22:33:51.540  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b458d28) locale list changing from [] to [en-US]
+08-03 22:33:51.541  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b45e128) locale list changing from [] to [en-US]
+08-03 22:33:51.542  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b459c28) locale list changing from [] to [en-US]
+08-03 22:33:51.543  6491  6491 I .burrowui.debug: AssetManager2(0x600c25a1b45fc28) locale list changing from [] to [en-US]
+08-03 22:33:51.544  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b36c928) locale list changing from [] to [en-US]
+08-03 22:33:51.545  6491  6491 I .burrowui.debug: AssetManager2(0x500c25a1b386428) locale list changing from [] to [en-US]
+08-03 22:33:51.547  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b371d28) locale list changing from [] to [en-US]
+08-03 22:33:51.548  6491  6491 I .burrowui.debug: AssetManager2(0xe00c25a1b388828) locale list changing from [] to [en-US]
+08-03 22:33:51.549  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b397828) locale list changing from [] to [en-US]
+08-03 22:33:51.550  6491  6491 I .burrowui.debug: AssetManager2(0xe00c25a1b384328) locale list changing from [] to [en-US]
+08-03 22:33:51.551  6491  6491 I .burrowui.debug: AssetManager2(0x700c25a1b456928) locale list changing from [] to [en-US]
+08-03 22:33:51.552  6491  6491 I .burrowui.debug: AssetManager2(0x200c25a1b382228) locale list changing from [] to [en-US]
+08-03 22:33:51.553  6491  6491 I .burrowui.debug: AssetManager2(0x700c25a1b457e28) locale list changing from [] to [en-US]
+08-03 22:33:51.554  6491  6491 I .burrowui.debug: AssetManager2(0xd00c25a1b381328) locale list changing from [] to [en-US]
+08-03 22:33:51.555  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b398428) locale list changing from [] to [en-US]
+08-03 22:33:51.556  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b380128) locale list changing from [] to [en-US]
+08-03 22:33:51.557  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b459928) locale list changing from [] to [en-US]
+08-03 22:33:51.558  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b457228) locale list changing from [] to [en-US]
+08-03 22:33:51.559  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b399328) locale list changing from [] to [en-US]
+08-03 22:33:51.560  6491  6491 I .burrowui.debug: AssetManager2(0x600c25a1b37ef28) locale list changing from [] to [en-US]
+08-03 22:33:51.561  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b396328) locale list changing from [] to [en-US]
+08-03 22:33:51.562  6491  6491 I .burrowui.debug: AssetManager2(0x800c25a1b3b9a28) locale list changing from [] to [en-US]
+08-03 22:33:51.563  6491  6491 I .burrowui.debug: AssetManager2(0xf00c25a1b3aec28) locale list changing from [] to [en-US]
+08-03 22:33:51.564  6491  6491 I .burrowui.debug: AssetManager2(0x800c25a1b39b428) locale list changing from [] to [en-US]
+08-03 22:33:51.565  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b39ab28) locale list changing from [] to [en-US]
+08-03 22:33:51.567  6491  6491 I .burrowui.debug: AssetManager2(0x900c25a1b39b128) locale list changing from [] to [en-US]
+08-03 22:33:51.568  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b36e128) locale list changing from [] to [en-US]
+08-03 22:33:51.570  6491  6491 I .burrowui.debug: AssetManager2(0xd00c25a1b37e628) locale list changing from [] to [en-US]
+08-03 22:33:51.571  6491  6491 I .burrowui.debug: AssetManager2(0x100c25a1b470128) locale list changing from [] to [en-US]
+08-03 22:33:51.572  6491  6491 I .burrowui.debug: AssetManager2(0xc00c25a1b472228) locale list changing from [] to [en-US]
+08-03 22:33:51.573  6491  6491 I .burrowui.debug: AssetManager2(0xa00c25a1b472528) locale list changing from [] to [en-US]
+08-03 22:33:51.574  6491  6491 I .burrowui.debug: AssetManager2(0x700c25a1b39fc28) locale list changing from [] to [en-US]
+08-03 22:33:51.575  6491  6491 I .burrowui.debug: AssetManager2(0xd00c25a1b476428) locale list changing from [] to [en-US]
+08-03 22:33:51.576  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b3b9728) locale list changing from [] to [en-US]
+08-03 22:33:51.577  6491  6491 I .burrowui.debug: AssetManager2(0x300c25a1b369028) locale list changing from [] to [en-US]
+--------- switch to system
+08-03 22:33:51.581  6491  6491 E TransactionExecutor: Failed to execute the transaction: tId:1603761088 ClientTransaction{
+08-03 22:33:51.581  6491  6491 E TransactionExecutor: tId:1603761088   transactionItems=[
+08-03 22:33:51.581  6491  6491 E TransactionExecutor: tId:1603761088     LaunchActivityItem{activityToken=android.os.BinderProxy@d90606b,intent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x34000000 xflg=0x4 pkg=com.hamsterbase.burrowui.debug cmp=com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity },ident=22355826,info=ActivityInfo{dba38f0 com.hamsterbase.burrowui.MainActivity},curConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h997dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 0 - 1344, 2992) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.4331 fontWeightAdjustment=0},overrideConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h997dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 0 - 1344, 2992) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.2 fontWeightAdjustment=0},deviceId=0,referrer=com.android.packageinstaller,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,sceneTransitionInfo=null,profilerInfo=null,assistToken=android.os.BinderProxy@ea4d86d,shareableActivityToken=android.os.BinderProxy@76f8ca2,activityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1344, 2992), taskFragmentBounds=Rect(0, 0 - 1344, 2992)}}
+08-03 22:33:51.581  6491  6491 E TransactionExecutor: tId:1603761088     ResumeActivityItem{mActivityToken=android.os.BinderProxy@d90606b,procState=-1,isForward=true,shouldSendCompatFakeFocus=false}
+08-03 22:33:51.581  6491  6491 E TransactionExecutor: tId:1603761088     Target activity: com.hamsterbase.burrowui.MainActivity
+08-03 22:33:51.581  6491  6491 E TransactionExecutor: tId:1603761088   ]
+08-03 22:33:51.581  6491  6491 E TransactionExecutor: tId:1603761088 }
+--------- switch to main
+08-03 22:33:51.581  6491  6491 D AndroidRuntime: Shutting down VM
+--------- switch to crash
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: FATAL EXCEPTION: main
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: Process: com.hamsterbase.burrowui.debug, PID: 6491
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity}: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4293)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4480)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:222)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:133)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:103)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:80)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2832)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:248)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:338)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9106)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:593)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:948)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.updateAlphabeticalIndex(MainActivity.java:349)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.displaySelectedApps(MainActivity.java:241)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.onCreate(MainActivity.java:93)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9208)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9186)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1531)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4275)
+08-03 22:33:51.582  6491  6491 E AndroidRuntime: 	... 13 more
+--------- switch to main
+08-03 22:33:51.588  6491  6491 I Process : Sending signal. PID: 6491 SIG: 9
+08-03 22:33:53.380  6538  6538 I .burrowui.debug: Late-enabling -Xcheck:jni
+08-03 22:33:53.399  6538  6538 I .burrowui.debug: Using CollectorTypeCMC GC.
+08-03 22:33:53.407  6538  6538 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+08-03 22:33:53.427  6538  6538 D nativeloader: Configuring clns-9 for other apk /data/app/~~nXIbiEMR_K6L1zu6qnHOgw==/com.hamsterbase.burrowui.debug--9Id5f92VkTUI3uWkdOXMg==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~nXIbiEMR_K6L1zu6qnHOgw==/com.hamsterbase.burrowui.debug--9Id5f92VkTUI3uWkdOXMg==/lib/arm64, permitted_path=/data:/mnt/expand:/data/user/0/com.hamsterbase.burrowui.debug
+08-03 22:33:53.430  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b389728) locale list changing from [] to [en-US]
+08-03 22:33:53.434  6538  6538 V GraphicsEnvironment: Currently set values for:
+08-03 22:33:53.434  6538  6538 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[com.android.angle, com.linecorp.b612.android, com.campmobile.snow, com.google.android.apps.tachyon]
+08-03 22:33:53.434  6538  6538 V GraphicsEnvironment:   angle_gl_driver_selection_values=[angle, native, native, native]
+08-03 22:33:53.434  6538  6538 V GraphicsEnvironment: com.hamsterbase.burrowui.debug is not listed in per-application setting
+08-03 22:33:53.434  6538  6538 V GraphicsEnvironment: ANGLE allowlist from config: 
+08-03 22:33:53.434  6538  6538 V GraphicsEnvironment: com.hamsterbase.burrowui.debug is not listed in ANGLE allowlist or settings, returning default
+08-03 22:33:53.434  6538  6538 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+--------- switch to system
+08-03 22:33:53.445  6538  6553 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+--------- switch to main
+08-03 22:33:53.447  6538  6538 I .burrowui.debug: AssetManager2(0xb00c25a1b382828) locale list changing from [] to [en-US]
+08-03 22:33:53.451  6538  6538 E ashmem  : Pinning is deprecated since Android Q. Please use trim or other methods.
+08-03 22:33:53.458  6538  6538 D CompatChangeReporter: Compat change id reported: 377864165; UID 10380; state: ENABLED
+08-03 22:33:53.459  6538  6538 D DesktopModeFlags: Toggle override initialized to: OVERRIDE_UNSET
+08-03 22:33:53.510  6538  6538 I .burrowui.debug: AssetManager2(0x200c25a1b396f28) locale list changing from [] to [en-US]
+08-03 22:33:53.513  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b3a0528) locale list changing from [] to [en-US]
+08-03 22:33:53.515  6538  6538 I .burrowui.debug: AssetManager2(0xe00c25a1b39de28) locale list changing from [] to [en-US]
+08-03 22:33:53.516  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b39e128) locale list changing from [] to [en-US]
+08-03 22:33:53.517  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b399c28) locale list changing from [] to [en-US]
+08-03 22:33:53.519  6538  6538 I .burrowui.debug: AssetManager2(0x400c25a1b39ea28) locale list changing from [] to [en-US]
+08-03 22:33:53.520  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b39ab28) locale list changing from [] to [en-US]
+08-03 22:33:53.521  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b39b728) locale list changing from [] to [en-US]
+08-03 22:33:53.524  6538  6538 I .burrowui.debug: AssetManager2(0xd00c25a1b39c628) locale list changing from [] to [en-US]
+08-03 22:33:53.525  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b3b7328) locale list changing from [] to [en-US]
+08-03 22:33:53.526  6538  6538 I .burrowui.debug: AssetManager2(0xd00c25a1b3b7c28) locale list changing from [] to [en-US]
+08-03 22:33:53.528  6538  6538 I .burrowui.debug: AssetManager2(0x700c25a1b3ae328) locale list changing from [] to [en-US]
+08-03 22:33:53.529  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b3b1c28) locale list changing from [] to [en-US]
+08-03 22:33:53.531  6538  6538 I .burrowui.debug: AssetManager2(0xe00c25a1b3b5e28) locale list changing from [] to [en-US]
+08-03 22:33:53.532  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b3b6428) locale list changing from [] to [en-US]
+08-03 22:33:53.533  6538  6538 I .burrowui.debug: AssetManager2(0xa00c25a1b3b5228) locale list changing from [] to [en-US]
+08-03 22:33:53.534  6538  6538 I .burrowui.debug: AssetManager2(0xd00c25a1b3b5528) locale list changing from [] to [en-US]
+08-03 22:33:53.535  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b3aef28) locale list changing from [] to [en-US]
+08-03 22:33:53.538  6538  6538 I .burrowui.debug: AssetManager2(0x700c25a1b3b9128) locale list changing from [] to [en-US]
+08-03 22:33:53.540  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b3b9428) locale list changing from [] to [en-US]
+08-03 22:33:53.541  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b3b9d28) locale list changing from [] to [en-US]
+08-03 22:33:53.542  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b3cff28) locale list changing from [] to [en-US]
+08-03 22:33:53.544  6538  6538 I .burrowui.debug: AssetManager2(0xa00c25a1b3c8728) locale list changing from [] to [en-US]
+08-03 22:33:53.545  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b3cd228) locale list changing from [] to [en-US]
+08-03 22:33:53.546  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b3c6928) locale list changing from [] to [en-US]
+08-03 22:33:53.548  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b3c6028) locale list changing from [] to [en-US]
+08-03 22:33:53.550  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b3c7828) locale list changing from [] to [en-US]
+08-03 22:33:53.551  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b3ced28) locale list changing from [] to [en-US]
+08-03 22:33:53.552  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b3d0828) locale list changing from [] to [en-US]
+08-03 22:33:53.553  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b3c7e28) locale list changing from [] to [en-US]
+08-03 22:33:53.554  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b3c9628) locale list changing from [] to [en-US]
+08-03 22:33:53.557  6538  6538 I .burrowui.debug: AssetManager2(0xb00c25a1b3ce428) locale list changing from [] to [en-US]
+08-03 22:33:53.559  6538  6538 I .burrowui.debug: AssetManager2(0xd00c25a1b3ce728) locale list changing from [] to [en-US]
+08-03 22:33:53.561  6538  6538 I .burrowui.debug: AssetManager2(0x800c25a1b3c9c28) locale list changing from [] to [en-US]
+08-03 22:33:53.563  6538  6538 I .burrowui.debug: AssetManager2(0x800c25a1b3d0528) locale list changing from [] to [en-US]
+08-03 22:33:53.564  6538  6538 I .burrowui.debug: AssetManager2(0x400c25a1b3ca528) locale list changing from [] to [en-US]
+08-03 22:33:53.565  6538  6538 I .burrowui.debug: AssetManager2(0xb00c25a1b3d1728) locale list changing from [] to [en-US]
+08-03 22:33:53.566  6538  6538 I .burrowui.debug: AssetManager2(0x700c25a1b3e4628) locale list changing from [] to [en-US]
+08-03 22:33:53.567  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b3e7328) locale list changing from [] to [en-US]
+08-03 22:33:53.568  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b3e1c28) locale list changing from [] to [en-US]
+08-03 22:33:53.569  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b3e7028) locale list changing from [] to [en-US]
+08-03 22:33:53.570  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b3e2828) locale list changing from [] to [en-US]
+08-03 22:33:53.572  6538  6538 I .burrowui.debug: AssetManager2(0x500c25a1b3e2528) locale list changing from [] to [en-US]
+08-03 22:33:53.573  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b3e8b28) locale list changing from [] to [en-US]
+08-03 22:33:53.574  6538  6538 I .burrowui.debug: AssetManager2(0x700c25a1b3e0128) locale list changing from [] to [en-US]
+08-03 22:33:53.575  6538  6538 I .burrowui.debug: AssetManager2(0x700c25a1b3e3728) locale list changing from [] to [en-US]
+08-03 22:33:53.576  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b3e6a28) locale list changing from [] to [en-US]
+08-03 22:33:53.577  6538  6538 I .burrowui.debug: AssetManager2(0xe00c25a1b3e6728) locale list changing from [] to [en-US]
+08-03 22:33:53.579  6538  6538 I .burrowui.debug: AssetManager2(0xb00c25a1b3e5828) locale list changing from [] to [en-US]
+08-03 22:33:53.580  6538  6538 I .burrowui.debug: AssetManager2(0xb00c25a1b3e7c28) locale list changing from [] to [en-US]
+08-03 22:33:53.581  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b3e5e28) locale list changing from [] to [en-US]
+08-03 22:33:53.582  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b3e6d28) locale list changing from [] to [en-US]
+08-03 22:33:53.583  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b3e9728) locale list changing from [] to [en-US]
+08-03 22:33:53.584  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b3e1928) locale list changing from [] to [en-US]
+08-03 22:33:53.585  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b3ff928) locale list changing from [] to [en-US]
+08-03 22:33:53.587  6538  6538 I .burrowui.debug: AssetManager2(0x500c25a1b3fb128) locale list changing from [] to [en-US]
+08-03 22:33:53.588  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b3f9028) locale list changing from [] to [en-US]
+08-03 22:33:53.589  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b3f9c28) locale list changing from [] to [en-US]
+08-03 22:33:53.590  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b3fdb28) locale list changing from [] to [en-US]
+08-03 22:33:53.591  6538  6538 I .burrowui.debug: AssetManager2(0x500c25a1b3fde28) locale list changing from [] to [en-US]
+08-03 22:33:53.592  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b3f9628) locale list changing from [] to [en-US]
+08-03 22:33:53.593  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b3fea28) locale list changing from [] to [en-US]
+08-03 22:33:53.594  6538  6538 I .burrowui.debug: AssetManager2(0xa00c25a1b3f9928) locale list changing from [] to [en-US]
+08-03 22:33:53.596  6538  6538 I .burrowui.debug: AssetManager2(0x500c25a1b3ff628) locale list changing from [] to [en-US]
+08-03 22:33:53.597  6538  6538 I .burrowui.debug: AssetManager2(0x800c25a1b3f6628) locale list changing from [] to [en-US]
+08-03 22:33:53.598  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b3f8d28) locale list changing from [] to [en-US]
+08-03 22:33:53.599  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b401428) locale list changing from [] to [en-US]
+08-03 22:33:53.600  6538  6538 I .burrowui.debug: AssetManager2(0xe00c25a1b3fa828) locale list changing from [] to [en-US]
+08-03 22:33:53.602  6538  6538 I .burrowui.debug: AssetManager2(0x800c25a1b3f7228) locale list changing from [] to [en-US]
+08-03 22:33:53.603  6538  6538 I .burrowui.debug: AssetManager2(0x200c25a1b3ff328) locale list changing from [] to [en-US]
+08-03 22:33:53.604  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b3fd228) locale list changing from [] to [en-US]
+08-03 22:33:53.605  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b3fed28) locale list changing from [] to [en-US]
+08-03 22:33:53.607  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b412228) locale list changing from [] to [en-US]
+08-03 22:33:53.608  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b411628) locale list changing from [] to [en-US]
+08-03 22:33:53.609  6538  6538 I .burrowui.debug: AssetManager2(0x500c25a1b416728) locale list changing from [] to [en-US]
+08-03 22:33:53.610  6538  6538 I .burrowui.debug: AssetManager2(0xa00c25a1b410128) locale list changing from [] to [en-US]
+08-03 22:33:53.611  6538  6538 I .burrowui.debug: AssetManager2(0xb00c25a1b414628) locale list changing from [] to [en-US]
+08-03 22:33:53.612  6538  6538 I .burrowui.debug: AssetManager2(0xd00c25a1b416428) locale list changing from [] to [en-US]
+08-03 22:33:53.613  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b410728) locale list changing from [] to [en-US]
+08-03 22:33:53.614  6538  6538 I .burrowui.debug: AssetManager2(0xa00c25a1b417628) locale list changing from [] to [en-US]
+08-03 22:33:53.615  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b410a28) locale list changing from [] to [en-US]
+08-03 22:33:53.616  6538  6538 I .burrowui.debug: AssetManager2(0x200c25a1b417c28) locale list changing from [] to [en-US]
+08-03 22:33:53.617  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b40e028) locale list changing from [] to [en-US]
+08-03 22:33:53.618  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b411c28) locale list changing from [] to [en-US]
+08-03 22:33:53.620  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b419728) locale list changing from [] to [en-US]
+08-03 22:33:53.621  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b416128) locale list changing from [] to [en-US]
+08-03 22:33:53.622  6538  6538 I .burrowui.debug: AssetManager2(0x400c25a1b418e28) locale list changing from [] to [en-US]
+08-03 22:33:53.624  6538  6538 I .burrowui.debug: AssetManager2(0xb00c25a1b40ec28) locale list changing from [] to [en-US]
+08-03 22:33:53.625  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b40f828) locale list changing from [] to [en-US]
+08-03 22:33:53.626  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b413d28) locale list changing from [] to [en-US]
+08-03 22:33:53.627  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b415228) locale list changing from [] to [en-US]
+08-03 22:33:53.628  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b415b28) locale list changing from [] to [en-US]
+08-03 22:33:53.629  6538  6538 I .burrowui.debug: AssetManager2(0x500c25a1b42c028) locale list changing from [] to [en-US]
+08-03 22:33:53.630  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b430228) locale list changing from [] to [en-US]
+08-03 22:33:53.632  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b429f28) locale list changing from [] to [en-US]
+08-03 22:33:53.634  6538  6538 I .burrowui.debug: AssetManager2(0xe00c25a1b42ae28) locale list changing from [] to [en-US]
+08-03 22:33:53.635  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b42ba28) locale list changing from [] to [en-US]
+08-03 22:33:53.636  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b429c28) locale list changing from [] to [en-US]
+08-03 22:33:53.637  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b42f328) locale list changing from [] to [en-US]
+08-03 22:33:53.638  6538  6538 I .burrowui.debug: AssetManager2(0x500c25a1b427828) locale list changing from [] to [en-US]
+08-03 22:33:53.639  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b426928) locale list changing from [] to [en-US]
+08-03 22:33:53.641  6538  6538 I .burrowui.debug: AssetManager2(0xa00c25a1b428428) locale list changing from [] to [en-US]
+08-03 22:33:53.642  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b426c28) locale list changing from [] to [en-US]
+08-03 22:33:53.643  6538  6538 I .burrowui.debug: AssetManager2(0xb00c25a1b429928) locale list changing from [] to [en-US]
+08-03 22:33:53.644  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b42cc28) locale list changing from [] to [en-US]
+08-03 22:33:53.645  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b42d828) locale list changing from [] to [en-US]
+08-03 22:33:53.646  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b431428) locale list changing from [] to [en-US]
+08-03 22:33:53.647  6538  6538 I .burrowui.debug: AssetManager2(0x200c25a1b431728) locale list changing from [] to [en-US]
+08-03 22:33:53.648  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b443728) locale list changing from [] to [en-US]
+08-03 22:33:53.649  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b444628) locale list changing from [] to [en-US]
+08-03 22:33:53.650  6538  6538 I .burrowui.debug: AssetManager2(0x200c25a1b443128) locale list changing from [] to [en-US]
+08-03 22:33:53.652  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b448528) locale list changing from [] to [en-US]
+08-03 22:33:53.653  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b444928) locale list changing from [] to [en-US]
+08-03 22:33:53.654  6538  6538 I .burrowui.debug: AssetManager2(0xb00c25a1b440728) locale list changing from [] to [en-US]
+08-03 22:33:53.658  6538  6538 I .burrowui.debug: AssetManager2(0xa00c25a1b43f528) locale list changing from [] to [en-US]
+08-03 22:33:53.659  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b448e28) locale list changing from [] to [en-US]
+08-03 22:33:53.661  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b445e28) locale list changing from [] to [en-US]
+08-03 22:33:53.662  6538  6538 I .burrowui.debug: AssetManager2(0xd00c25a1b441928) locale list changing from [] to [en-US]
+08-03 22:33:53.663  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b43e328) locale list changing from [] to [en-US]
+08-03 22:33:53.665  6538  6538 I .burrowui.debug: AssetManager2(0x800c25a1b459328) locale list changing from [] to [en-US]
+08-03 22:33:53.666  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b45a228) locale list changing from [] to [en-US]
+08-03 22:33:53.667  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b45ba28) locale list changing from [] to [en-US]
+08-03 22:33:53.668  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b45d828) locale list changing from [] to [en-US]
+08-03 22:33:53.669  6538  6538 I .burrowui.debug: AssetManager2(0xe00c25a1b460828) locale list changing from [] to [en-US]
+08-03 22:33:53.670  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b461728) locale list changing from [] to [en-US]
+08-03 22:33:53.671  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b457228) locale list changing from [] to [en-US]
+08-03 22:33:53.672  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b45ab28) locale list changing from [] to [en-US]
+08-03 22:33:53.673  6538  6538 I .burrowui.debug: AssetManager2(0xd00c25a1b456328) locale list changing from [] to [en-US]
+08-03 22:33:53.674  6538  6538 I .burrowui.debug: AssetManager2(0x400c25a1b381628) locale list changing from [] to [en-US]
+08-03 22:33:53.675  6538  6538 I .burrowui.debug: AssetManager2(0x200c25a1b386428) locale list changing from [] to [en-US]
+08-03 22:33:53.676  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b388b28) locale list changing from [] to [en-US]
+08-03 22:33:53.677  6538  6538 I .burrowui.debug: AssetManager2(0x500c25a1b371128) locale list changing from [] to [en-US]
+08-03 22:33:53.679  6538  6538 I .burrowui.debug: AssetManager2(0x200c25a1b37e628) locale list changing from [] to [en-US]
+08-03 22:33:53.680  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b36cf28) locale list changing from [] to [en-US]
+08-03 22:33:53.681  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b457828) locale list changing from [] to [en-US]
+08-03 22:33:53.682  6538  6538 I .burrowui.debug: AssetManager2(0x700c25a1b45f328) locale list changing from [] to [en-US]
+08-03 22:33:53.683  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b380428) locale list changing from [] to [en-US]
+08-03 22:33:53.684  6538  6538 I .burrowui.debug: AssetManager2(0x800c25a1b385528) locale list changing from [] to [en-US]
+08-03 22:33:53.685  6538  6538 I .burrowui.debug: AssetManager2(0x500c25a1b366f28) locale list changing from [] to [en-US]
+08-03 22:33:53.686  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b399328) locale list changing from [] to [en-US]
+08-03 22:33:53.686  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b383a28) locale list changing from [] to [en-US]
+08-03 22:33:53.687  6538  6538 I .burrowui.debug: AssetManager2(0x500c25a1b39d828) locale list changing from [] to [en-US]
+08-03 22:33:53.688  6538  6538 I .burrowui.debug: AssetManager2(0x500c25a1b382e28) locale list changing from [] to [en-US]
+08-03 22:33:53.691  6538  6538 I .burrowui.debug: AssetManager2(0x600c25a1b388828) locale list changing from [] to [en-US]
+08-03 22:33:53.691  6538  6538 I .burrowui.debug: AssetManager2(0xf00c25a1b371728) locale list changing from [] to [en-US]
+08-03 22:33:53.692  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b3a1728) locale list changing from [] to [en-US]
+08-03 22:33:53.693  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b386a28) locale list changing from [] to [en-US]
+08-03 22:33:53.695  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b3b2828) locale list changing from [] to [en-US]
+08-03 22:33:53.696  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b3b0a28) locale list changing from [] to [en-US]
+08-03 22:33:53.697  6538  6538 I .burrowui.debug: AssetManager2(0x900c25a1b39ba28) locale list changing from [] to [en-US]
+08-03 22:33:53.699  6538  6538 I .burrowui.debug: AssetManager2(0x200c25a1b36e728) locale list changing from [] to [en-US]
+08-03 22:33:53.700  6538  6538 I .burrowui.debug: AssetManager2(0xa00c25a1b471628) locale list changing from [] to [en-US]
+08-03 22:33:53.701  6538  6538 I .burrowui.debug: AssetManager2(0x100c25a1b46ef28) locale list changing from [] to [en-US]
+08-03 22:33:53.702  6538  6538 I .burrowui.debug: AssetManager2(0xc00c25a1b384628) locale list changing from [] to [en-US]
+08-03 22:33:53.703  6538  6538 I .burrowui.debug: AssetManager2(0x200c25a1b3b8828) locale list changing from [] to [en-US]
+08-03 22:33:53.703  6538  6538 I .burrowui.debug: AssetManager2(0x300c25a1b478228) locale list changing from [] to [en-US]
+08-03 22:33:53.705  6538  6538 I .burrowui.debug: AssetManager2(0x400c25a1b39ae28) locale list changing from [] to [en-US]
+08-03 22:33:53.706  6538  6538 I .burrowui.debug: AssetManager2(0x200c25a1b3b4628) locale list changing from [] to [en-US]
+--------- switch to system
+08-03 22:33:53.710  6538  6538 E TransactionExecutor: Failed to execute the transaction: tId:1225575118 ClientTransaction{
+08-03 22:33:53.710  6538  6538 E TransactionExecutor: tId:1225575118   transactionItems=[
+08-03 22:33:53.710  6538  6538 E TransactionExecutor: tId:1225575118     LaunchActivityItem{activityToken=android.os.BinderProxy@d90606b,intent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 xflg=0x4 cmp=com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity bnds=[25,231][284,706] },ident=98706436,info=ActivityInfo{dba38f0 com.hamsterbase.burrowui.MainActivity},curConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h997dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 0 - 1344, 2992) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=undefined mAlwaysOnTop=undefined mRotation=ROTATION_0} s.4332 fontWeightAdjustment=0},overrideConfig={1.0 262mcc2mnc [en_US_#u-fw-mon-mu-celsius,en_GB_#u-fw-mon-mu-celsius] ldltr sw448dp w448dp h997dp 480dpi nrml long hdr widecg port night finger -keyb/v/h -nav/h winConfig={ mBounds=Rect(0, 0 - 1344, 2992) mAppBounds=Rect(0, 0 - 1344, 2992) mMaxBounds=Rect(0, 0 - 1344, 2992) mDisplayRotation=ROTATION_0 mWindowingMode=fullscreen mActivityType=standard mAlwaysOnTop=undefined mRotation=ROTATION_0} s.2 fontWeightAdjustment=0},deviceId=0,referrer=com.android.launcher3,procState=2,state=null,persistentState=null,pendingResults=null,pendingNewIntents=null,sceneTransitionInfo=null,profilerInfo=null,assistToken=android.os.BinderProxy@ea4d86d,shareableActivityToken=android.os.BinderProxy@76f8ca2,activityWindowInfo=ActivityWindowInfo{isEmbedded=false, taskBounds=Rect(0, 0 - 1344, 2992), taskFragmentBounds=Rect(0, 0 - 1344, 2992)}}
+08-03 22:33:53.710  6538  6538 E TransactionExecutor: tId:1225575118     ResumeActivityItem{mActivityToken=android.os.BinderProxy@d90606b,procState=-1,isForward=true,shouldSendCompatFakeFocus=false}
+08-03 22:33:53.710  6538  6538 E TransactionExecutor: tId:1225575118     Target activity: com.hamsterbase.burrowui.MainActivity
+08-03 22:33:53.710  6538  6538 E TransactionExecutor: tId:1225575118   ]
+08-03 22:33:53.710  6538  6538 E TransactionExecutor: tId:1225575118 }
+--------- switch to main
+08-03 22:33:53.710  6538  6538 D AndroidRuntime: Shutting down VM
+--------- switch to crash
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: FATAL EXCEPTION: main
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: Process: com.hamsterbase.burrowui.debug, PID: 6538
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: java.lang.RuntimeException: Unable to start activity ComponentInfo{com.hamsterbase.burrowui.debug/com.hamsterbase.burrowui.MainActivity}: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4293)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4480)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:222)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:133)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:103)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:80)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2832)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.os.Handler.dispatchMessage(Handler.java:110)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.os.Looper.loopOnce(Looper.java:248)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.os.Looper.loop(Looper.java:338)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.ActivityThread.main(ActivityThread.java:9106)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at java.lang.reflect.Method.invoke(Native Method)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:593)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:948)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: Caused by: java.lang.NullPointerException: Attempt to get length of null array
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.updateAlphabeticalIndex(MainActivity.java:349)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.displaySelectedApps(MainActivity.java:241)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at com.hamsterbase.burrowui.MainActivity.onCreate(MainActivity.java:93)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9208)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.Activity.performCreate(Activity.java:9186)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1531)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4275)
+08-03 22:33:53.711  6538  6538 E AndroidRuntime: 	... 13 more
+--------- switch to main
+08-03 22:33:55.193  6538  6538 I Process : Sending signal. PID: 6538 SIG: 9

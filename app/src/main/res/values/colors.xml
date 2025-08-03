@@ -3,4 +3,6 @@
     <color name="black1">#FF000000</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="alphabet_highlight">#FF000000</color>
+    <color name="alphabet_normal">#80000000</color>
 </resources>

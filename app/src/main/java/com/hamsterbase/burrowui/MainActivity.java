@@ -45,6 +45,10 @@ public class MainActivity extends Activity {
     private float touchStartY;
     private static final float SWIPE_THRESHOLD = 200;
 
+    // Alphabetical index views
+    private TextView[] letterViews;
+    private ScrollView appScrollView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +62,7 @@ public class MainActivity extends Activity {
         dateTextView = findViewById(R.id.dateTextView);
         amPmTextView = findViewById(R.id.amPmTextView);
         appLinearLayout = findViewById(R.id.appLinearLayout);
+        appScrollView = findViewById(R.id.appScrollList);
 
         ScrollView appList = findViewById(R.id.appScrollList);
         appList.setOverScrollMode(View.OVER_SCROLL_NEVER);
@@ -85,6 +90,7 @@ public class MainActivity extends Activity {
         };
 
         loadApps();
+        setupAlphabeticalIndex();
         displaySelectedApps();
 
         View rootView = findViewById(android.R.id.content);
@@ -152,6 +158,7 @@ public class MainActivity extends Activity {
     protected void onResume() {
         super.onResume();
         loadApps();
+        setupAlphabeticalIndex();
         displaySelectedApps();
         handler.post(updateTimeRunnable);
 
@@ -212,6 +219,13 @@ public class MainActivity extends Activity {
                 }
             }
         }
+        
+        // Sort apps alphabetically
+        selectedApps.sort((app1, app2) -> {
+            String label1 = app1.getLabel() != null ? app1.getLabel() : "";
+            String label2 = app2.getLabel() != null ? app2.getLabel() : "";
+            return label1.compareToIgnoreCase(label2);
+        });
     }
 
     private void displaySelectedApps() {
@@ -222,6 +236,11 @@ public class MainActivity extends Activity {
 
         if (settingsManager.isShowSettingsIcon()) {
             addSettingsAppToLayout();
+        }
+        
+        // Update alphabetical index visibility only if letterViews is initialized
+        if (letterViews != null) {
+            updateAlphabeticalIndex();
         }
     }
 
@@ -255,5 +274,106 @@ public class MainActivity extends Activity {
     private void openSearchActivity() {
         Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
+    }
+
+    private void setupAlphabeticalIndex() {
+        // Initialize letter views
+        letterViews = new TextView[26];
+        letterViews[0] = findViewById(R.id.letterA);
+        letterViews[1] = findViewById(R.id.letterB);
+        letterViews[2] = findViewById(R.id.letterC);
+        letterViews[3] = findViewById(R.id.letterD);
+        letterViews[4] = findViewById(R.id.letterE);
+        letterViews[5] = findViewById(R.id.letterF);
+        letterViews[6] = findViewById(R.id.letterG);
+        letterViews[7] = findViewById(R.id.letterH);
+        letterViews[8] = findViewById(R.id.letterI);
+        letterViews[9] = findViewById(R.id.letterJ);
+        letterViews[10] = findViewById(R.id.letterK);
+        letterViews[11] = findViewById(R.id.letterL);
+        letterViews[12] = findViewById(R.id.letterM);
+        letterViews[13] = findViewById(R.id.letterN);
+        letterViews[14] = findViewById(R.id.letterO);
+        letterViews[15] = findViewById(R.id.letterP);
+        letterViews[16] = findViewById(R.id.letterQ);
+        letterViews[17] = findViewById(R.id.letterR);
+        letterViews[18] = findViewById(R.id.letterS);
+        letterViews[19] = findViewById(R.id.letterT);
+        letterViews[20] = findViewById(R.id.letterU);
+        letterViews[21] = findViewById(R.id.letterV);
+        letterViews[22] = findViewById(R.id.letterW);
+        letterViews[23] = findViewById(R.id.letterX);
+        letterViews[24] = findViewById(R.id.letterY);
+        letterViews[25] = findViewById(R.id.letterZ);
+
+        // Set click listeners for each letter
+        for (int i = 0; i < letterViews.length; i++) {
+            final int index = i;
+            letterViews[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    scrollToLetter(index);
+                }
+            });
+        }
+    }
+
+    private void scrollToLetter(int letterIndex) {
+        if (selectedApps == null || selectedApps.isEmpty()) {
+            return;
+        }
+
+        // Convert letter index to character
+        char targetLetter = (char) ('A' + letterIndex);
+
+        // Find the first app that starts with the target letter
+        for (int i = 0; i < selectedApps.size(); i++) {
+            AppInfo app = selectedApps.get(i);
+            String label = app.getLabel();
+            if (label != null && !label.isEmpty()) {
+                char firstChar = Character.toUpperCase(label.charAt(0));
+                if (firstChar == targetLetter) {
+                    // Get the actual view at this position
+                    View childView = appLinearLayout.getChildAt(i);
+                    if (childView != null) {
+                        // Scroll to the actual position of the view
+                        int y = childView.getTop();
+                        appScrollView.smoothScrollTo(0, y);
+                    }
+                    break;
+                }
+            }
+        }
+    }
+
+    private void updateAlphabeticalIndex() {
+        if (selectedApps == null || selectedApps.isEmpty()) {
+            // Hide all letters if no apps
+            for (TextView letterView : letterViews) {
+                letterView.setAlpha(0.3f);
+            }
+            return;
+        }
+
+        // Create a set of first letters that exist in the app list
+        boolean[] hasAppsForLetter = new boolean[26];
+        for (AppInfo app : selectedApps) {
+            String label = app.getLabel();
+            if (label != null && !label.isEmpty()) {
+                char firstChar = Character.toUpperCase(label.charAt(0));
+                if (firstChar >= 'A' && firstChar <= 'Z') {
+                    hasAppsForLetter[firstChar - 'A'] = true;
+                }
+            }
+        }
+
+        // Update letter visibility based on whether apps exist for that letter
+        for (int i = 0; i < letterViews.length; i++) {
+            if (hasAppsForLetter[i]) {
+                letterViews[i].setAlpha(1.0f);
+            } else {
+                letterViews[i].setAlpha(0.3f);
+            }
+        }
     }
 }
