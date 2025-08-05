@@ -94,12 +94,10 @@ public class MainActivity extends Activity {
         displaySelectedApps();
 
         View rootView = findViewById(android.R.id.content);
-
         rootView.setOnTouchListener(new View.OnTouchListener() {
             private boolean isLongPress = false;
             private Handler longPressHandler = new Handler();
             private static final long LONG_PRESS_TIMEOUT = 600;
-            private boolean isPullDownEnabled = false;
 
             private Runnable longPressRunnable = new Runnable() {
                 @Override
@@ -113,27 +111,16 @@ public class MainActivity extends Activity {
             public boolean onTouch(View v, MotionEvent event) {
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
-                        touchStartY = event.getY();
                         isLongPress = false;
-                        isPullDownEnabled = touchStartY > 50 && settingsManager.isEnablePullDownSearch();
                         longPressHandler.postDelayed(longPressRunnable, LONG_PRESS_TIMEOUT);
                         return true;
 
                     case MotionEvent.ACTION_MOVE:
-                        if (isPullDownEnabled && Math.abs(event.getY() - touchStartY) > SWIPE_THRESHOLD) {
-                            longPressHandler.removeCallbacks(longPressRunnable);
-                        }
                         return true;
 
                     case MotionEvent.ACTION_UP:
                         longPressHandler.removeCallbacks(longPressRunnable);
                         if (isLongPress) {
-                            return true;
-                        }
-                        float touchEndY = event.getY();
-                        float deltaY = touchEndY - touchStartY;
-                        if (isPullDownEnabled && deltaY > SWIPE_THRESHOLD) {
-                            openSearchActivity();
                             return true;
                         }
                         return false;
