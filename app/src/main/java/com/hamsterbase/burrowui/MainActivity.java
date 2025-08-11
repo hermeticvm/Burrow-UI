@@ -236,6 +236,20 @@ public class MainActivity extends Activity {
         ImageView iconView = appView.findViewById(R.id.appIcon);
         TextView nameView = appView.findViewById(R.id.appName);
 
+        // Get custom icon size
+        int iconSize = settingsManager.getIconSize();
+        
+        // Set icon size
+        LinearLayout.LayoutParams iconParams = new LinearLayout.LayoutParams(
+            (int) (iconSize * getResources().getDisplayMetrics().density),
+            (int) (iconSize * getResources().getDisplayMetrics().density)
+        );
+        iconView.setLayoutParams(iconParams);
+        
+        // Set font size proportionally (scale from 14sp at 44dp)
+        float fontSize = 14f * (iconSize / 44f);
+        nameView.setTextSize(fontSize);
+        
         iconView.setImageDrawable(appManagementService.getIcon(app.getPackageName(), app.getUserId()));
         nameView.setText(app.getLabel());
         appView.setOnClickListener(v -> appManagementService.launchApp(app));
@@ -246,6 +260,20 @@ public class MainActivity extends Activity {
         View settingsAppView = getLayoutInflater().inflate(R.layout.app_item, null);
         ImageView iconView = settingsAppView.findViewById(R.id.appIcon);
         TextView nameView = settingsAppView.findViewById(R.id.appName);
+
+        // Get custom icon size
+        int iconSize = settingsManager.getIconSize();
+        
+        // Set icon size
+        LinearLayout.LayoutParams iconParams = new LinearLayout.LayoutParams(
+            (int) (iconSize * getResources().getDisplayMetrics().density),
+            (int) (iconSize * getResources().getDisplayMetrics().density)
+        );
+        iconView.setLayoutParams(iconParams);
+        
+        // Set font size proportionally (scale from 14sp at 44dp)
+        float fontSize = 14f * (iconSize / 44f);
+        nameView.setTextSize(fontSize);
 
         iconView.setImageResource(R.drawable.ic_settings);
         nameView.setText(R.string.launcher_settings);

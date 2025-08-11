@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.hamsterbase.burrowui.components.SettingsItem;
+import com.hamsterbase.burrowui.components.SliderSettingsItem;
 import com.hamsterbase.burrowui.components.SwitchSettingsItem;
 
 public class SettingsActivity extends Activity implements NavigationBar.OnBackClickListener {
@@ -73,6 +74,20 @@ public class SettingsActivity extends Activity implements NavigationBar.OnBackCl
                 settingsManager.isUse24HourFormat(),
                 isChecked -> {
                     settingsManager.setUse24HourFormat(isChecked);
+                }
+        ));
+
+        addLine();
+
+        settingsContainer.addView(new SliderSettingsItem(
+                this,
+                "Icon Size",
+                "Adjust the size of app icons for better accessibility. Font size will scale proportionally.",
+                24,  // min size in dp
+                64,  // max size in dp
+                settingsManager.getIconSize(),
+                newValue -> {
+                    settingsManager.setIconSize(newValue);
                 }
         ));
 

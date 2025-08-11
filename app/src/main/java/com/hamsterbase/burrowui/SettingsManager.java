@@ -21,6 +21,8 @@ public class SettingsManager {
     private static final String SELECTED_ITEMS_KEY = "SelectedItems";
     private static final String USE_24_HOUR_FORMAT_KEY = "Use24HourFormat";
     private static final String ENABLE_PULL_DOWN_SEARCH_KEY = "EnablePullDownSearch";
+    private static final String ICON_SIZE_KEY = "IconSize";
+    private static final int DEFAULT_ICON_SIZE = 44; // Default size in dp
 
     private SharedPreferences sharedPreferences;
 
@@ -132,6 +134,16 @@ public class SettingsManager {
     public void setEnablePullDownSearch(boolean enable) {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(ENABLE_PULL_DOWN_SEARCH_KEY, enable);
+        editor.apply();
+    }
+
+    public int getIconSize() {
+        return sharedPreferences.getInt(ICON_SIZE_KEY, DEFAULT_ICON_SIZE);
+    }
+
+    public void setIconSize(int size) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt(ICON_SIZE_KEY, size);
         editor.apply();
     }
 
