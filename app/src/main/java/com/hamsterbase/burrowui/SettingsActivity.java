@@ -52,18 +52,6 @@ public class SettingsActivity extends Activity implements NavigationBar.OnBackCl
 
         settingsContainer.addView(new SwitchSettingsItem(
                 this,
-                "Pull-down Search",
-                "When enabled, pull down from the top of the screen to open search.",
-                settingsManager.isEnablePullDownSearch(),
-                isChecked -> {
-                    settingsManager.setEnablePullDownSearch(isChecked);
-                }
-        ));
-
-        addLine();
-
-        settingsContainer.addView(new SwitchSettingsItem(
-                this,
                 "24-Hour Time Format",
                 "When enabled, time is displayed in 24-hour format. When disabled, time is displayed in 12-hour format with AM/PM.",
                 settingsManager.isUse24HourFormat(),

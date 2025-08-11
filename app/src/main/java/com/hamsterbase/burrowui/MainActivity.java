@@ -14,6 +14,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -35,6 +37,7 @@ public class MainActivity extends Activity {
     private TextView amPmTextView;
     private LinearLayout appLinearLayout;
     private List<AppInfo> selectedApps;
+    private List<AppInfo> filteredApps;
     private SettingsManager settingsManager;
     private AppManagementService appManagementService;
     private Handler handler;
@@ -42,8 +45,10 @@ public class MainActivity extends Activity {
     private BroadcastReceiver batteryReceiver;
     private String batteryText = "";
 
-    private float touchStartY;
-    private static final float SWIPE_THRESHOLD = 200;
+    private LinearLayout searchContainer;
+    private EditText searchEditText;
+    private ImageView searchToggleButton;
+    private ImageView clearSearchButton;
 
     // Alphabetical index views
     private TextView[] letterViews;
@@ -80,6 +85,12 @@ public class MainActivity extends Activity {
         settingsManager = new SettingsManager(this);
         appManagementService = AppManagementService.getInstance(this);
 
+        // Initialize search components
+        searchContainer = findViewById(R.id.searchContainer);
+        searchEditText = findViewById(R.id.searchEditText);
+        searchToggleButton = findViewById(R.id.searchToggleButton);
+        clearSearchButton = findViewById(R.id.clearSearchButton);
+
         handler = new Handler(Looper.getMainLooper());
         updateTimeRunnable = new Runnable() {
             @Override
@@ -92,6 +103,7 @@ public class MainActivity extends Activity {
         loadApps();
         setupAlphabeticalIndex();
         displaySelectedApps();
+        setupSearchFunctionality();
 
         View rootView = findViewById(android.R.id.content);
         rootView.setOnTouchListener(new View.OnTouchListener() {
@@ -372,7 +384,8 @@ public class MainActivity extends Activity {
 
         // Create a set of first letters that exist in the app list
         boolean[] hasAppsForLetter = new boolean[26];
-        for (AppInfo app : selectedApps) {
+        List<AppInfo> appsToCheck = filteredApps != null ? filteredApps : selectedApps;
+        for (AppInfo app : appsToCheck) {
             String label = app.getLabel();
             if (label != null && !label.isEmpty()) {
                 char firstChar = Character.toUpperCase(label.charAt(0));
@@ -389,6 +402,126 @@ public class MainActivity extends Activity {
             } else {
                 letterViews[i].setAlpha(0.3f);
             }
+        }
+    }
+
+    private void setupSearchFunctionality() {
+        // Initialize filtered apps
+        filteredApps = new ArrayList<>(selectedApps);
+
+        // Set up search toggle button
+        searchToggleButton.setOnClickListener(v -> toggleSearch());
+
+        // Set up clear search button
+        clearSearchButton.setOnClickListener(v -> clearSearch());
+
+        // Set up search edit text
+        searchEditText.addTextChangedListener(new android.text.TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                filterApps(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(android.text.Editable s) {}
+        });
+
+        // Handle keyboard done action
+        searchEditText.setOnEditorActionListener((v, actionId, event) -> {
+            if (actionId == android.view.inputmethod.EditorInfo.IME_ACTION_DONE) {
+                hideKeyboard();
+                return true;
+            }
+            return false;
+        });
+    }
+
+    private void toggleSearch() {
+        if (searchContainer.getVisibility() == View.VISIBLE) {
+            hideSearch();
+        } else {
+            showSearch();
+        }
+    }
+
+    private void showSearch() {
+        searchContainer.setVisibility(View.VISIBLE);
+        searchToggleButton.setVisibility(View.GONE);
+        searchEditText.requestFocus();
+        
+        // Show keyboard
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.showSoftInput(searchEditText, InputMethodManager.SHOW_IMPLICIT);
+    }
+
+    private void hideSearch() {
+        searchContainer.setVisibility(View.GONE);
+        searchToggleButton.setVisibility(View.VISIBLE);
+        searchEditText.setText("");
+        clearSearch();
+        
+        // Hide keyboard
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(searchEditText.getWindowToken(), 0);
+    }
+
+    private void clearSearch() {
+        searchEditText.setText("");
+        filteredApps = new ArrayList<>(selectedApps);
+        displaySelectedApps();
+        clearSearchButton.setVisibility(View.GONE);
+    }
+
+    private void filterApps(String query) {
+        if (query.isEmpty()) {
+            filteredApps = new ArrayList<>(selectedApps);
+            clearSearchButton.setVisibility(View.GONE);
+        } else {
+            filteredApps = new ArrayList<>();
+            String lowerQuery = query.toLowerCase();
+            for (AppInfo app : selectedApps) {
+                String label = app.getLabel() != null ? app.getLabel() : "";
+                String packageName = app.getPackageName() != null ? app.getPackageName() : "";
+                
+                if (label.toLowerCase().contains(lowerQuery) || 
+                    packageName.toLowerCase().contains(lowerQuery)) {
+                    filteredApps.add(app);
+                }
+            }
+            clearSearchButton.setVisibility(View.VISIBLE);
+        }
+        displayFilteredApps();
+    }
+
+    private void displayFilteredApps() {
+        appLinearLayout.removeAllViews();
+        for (AppInfo app : filteredApps) {
+            addAppToLayout(app);
+        }
+
+        if (settingsManager.isShowSettingsIcon() && filteredApps.size() > 0) {
+            addSettingsAppToLayout();
+        }
+        
+        if (letterViews != null) {
+            updateAlphabeticalIndex();
+        }
+    }
+
+    private void hideKeyboard() {
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(searchEditText.getWindowToken(), 0);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (searchContainer.getVisibility() == View.VISIBLE) {
+            hideSearch();
+        } else {
+            super.onBackPressed();
         }
     }
 }

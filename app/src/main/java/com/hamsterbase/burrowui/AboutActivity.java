@@ -47,14 +47,14 @@ public class AboutActivity extends Activity implements NavigationBar.OnBackClick
 
     private void setupLicenseInfo() {
         licenseSection.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/hamsterbase/Burrow-UI/blob/main/License"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/circumspace/Burrow-UI/blob/main/License"));
             startActivity(intent);
         });
     }
 
     private void setupSourceCodeInfo() {
         sourceCodeSection.setOnClickListener(v -> {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/hamsterbase/Burrow-UI"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/circumspace/Burrow-UI"));
             startActivity(intent);
         });
     }

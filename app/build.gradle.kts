@@ -14,8 +14,8 @@ android {
         applicationId = "com.hamsterbase.burrowui"
         minSdk = 24
         targetSdk = 36
-        versionCode = 6
-        versionName = "1.4.1"
+        versionCode = 7
+        versionName = "1.4.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -42,7 +42,7 @@ android {
         variant.outputs
             .map { it as com.android.build.gradle.internal.api.BaseVariantOutputImpl }
             .forEach { output ->
-                val project = "burrow-ui"
+                val project = "burrowed-launcher"
                 val s = "-"
                 val buildType = variant.buildType.name
                 val version = variant.versionName
