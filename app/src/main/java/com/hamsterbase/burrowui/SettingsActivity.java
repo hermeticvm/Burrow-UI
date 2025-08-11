@@ -28,11 +28,6 @@ public class SettingsActivity extends Activity implements NavigationBar.OnBackCl
         settingsContainer = findViewById(R.id.settingsContainer);
         settingsManager = new SettingsManager(this);
 
-        addSection("HamsterBase Tasks", "E-ink todo app", R.drawable.ic_link,
-                v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://tasks.hamsterbase.com/"))));
-
-        addLine();
-
         addSection("App Selection", "Manage visible apps in launcher", R.drawable.ic_right,
                 v -> startActivity(new Intent(SettingsActivity.this, AppSelectionActivity.class)));
 
@@ -83,8 +78,8 @@ public class SettingsActivity extends Activity implements NavigationBar.OnBackCl
                 this,
                 "Icon Size",
                 "Adjust the size of app icons for better accessibility. Font size will scale proportionally.",
-                24,  // min size in dp
-                64,  // max size in dp
+                32,  // min size in dp
+                96,  // max size in dp
                 settingsManager.getIconSize(),
                 newValue -> {
                     settingsManager.setIconSize(newValue);
