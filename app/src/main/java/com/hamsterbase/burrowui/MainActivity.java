@@ -450,11 +450,12 @@ public class MainActivity extends Activity {
     private void showSearch() {
         searchContainer.setVisibility(View.VISIBLE);
         searchToggleButton.setVisibility(View.GONE);
-        searchEditText.requestFocus();
+        // Don't auto-focus - let user tap to focus
+        // searchEditText.requestFocus();
         
-        // Show keyboard
-        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-        imm.showSoftInput(searchEditText, InputMethodManager.SHOW_IMPLICIT);
+        // Show keyboard only when user taps the input field
+        // InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        // imm.showSoftInput(searchEditText, InputMethodManager.SHOW_IMPLICIT);
     }
 
     private void hideSearch() {
