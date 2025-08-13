@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Light mode colors (original) -->
+    <color name="background">#FFFFFFFF</color>
+    <color name="text_primary">#FF000000</color>
+    <color name="text_secondary">#FF000000</color>
+    <color name="border">#FF000000</color>
+    <color name="highlight">#FF000000</color>
+    <color name="disabled">#80000000</color>
+    
+    <!-- Legacy colors (kept for compatibility) -->
     <color name="black1">#FF000000</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- Light mode states -->
     <color name="alphabet_highlight">#FF000000</color>
     <color name="alphabet_normal">#80000000</color>
 </resources>

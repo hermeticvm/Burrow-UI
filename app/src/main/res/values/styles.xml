@@ -2,7 +2,14 @@
 <resources>
     <style name="AppTheme">
         <item name="android:windowNoTitle">true</item>
-        <item name="android:textColor">@color/black1</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:background">@color/background</item>
+        <item name="android:colorBackground">@color/background</item>
     </style>
-
+    
+    <!-- High contrast button style -->
+    <style name="LCDButton">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:background">@drawable/lcd_button_background</item>
+    </style>
 </resources>
