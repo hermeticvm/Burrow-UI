@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark mode colors optimized for LCD with high contrast -->
+    <color name="background">#000000</color>
+    <color name="text_primary">#FFD700</color>
+    <color name="text_secondary">#FFFFFF</color>
+    <color name="border">#FFD700</color>
+    <color name="highlight">#FFD700</color>
+    <color name="disabled">#808080</color>
+    
+    <!-- Keep original color names for compatibility -->
+    <color name="black1">#FF000000</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Dark mode states with better contrast -->
+    <color name="alphabet_highlight">#FFD700</color>
+    <color name="alphabet_normal">#FFFFFF</color>
+</resources>
