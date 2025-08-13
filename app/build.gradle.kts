@@ -14,8 +14,8 @@ android {
         applicationId = "com.hamsterbase.burrowui"
         minSdk = 24
         targetSdk = 36
-        versionCode = 10
-        versionName = "1.5.1"
+        versionCode = 12
+        versionName = "1.5.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

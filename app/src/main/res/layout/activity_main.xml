@@ -125,14 +125,15 @@
                 android:orientation="vertical" />
         </ScrollView>
 
-        <!-- Alphabetical index -->
+        <!-- Alphabetical index - fixed width to prevent compression -->
         <LinearLayout
             android:id="@+id/alphabetLayout"
             android:layout_width="40dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:gravity="center"
-            android:paddingVertical="8dp">
+            android:paddingVertical="8dp"
+            android:layout_marginStart="8dp">
             
             <TextView
                 android:id="@+id/letterA"
